@@ -1,4 +1,76 @@
 /* ==========================================================================
+   SHARED HEADER & FOOTER TOKENS FOR PRIVACY PAGE
+   ========================================================================== */
+:root {
+    --gold-light: #fff088;
+    --gold-mid: #d09f38;
+    --gold-dark: #ba7e21;
+    --gold-gradient: linear-gradient(135deg, #ba7e21 0%, #d09f38 50%, #fff088 100%);
+    --dark-bg: #0b0c10;
+    --panel-bg: #1f2833;
+    --text-light: #f5f5f7;
+    --pure-white: #ffffff;
+}
+
+header {
+    background: rgba(11, 12, 16, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(208, 159, 56, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 12px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-hub { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand-logo { height: 45px; width: auto; }
+.brand-text { height: 24px; width: auto; }
+.nav-menu { display: flex; gap: 30px; align-items: center; }
+.nav-menu a { color: var(--text-light); text-decoration: none; font-size: 14px; font-weight: 500; }
+.nav-menu a:hover { color: var(--gold-mid); }
+
+.cta-btn {
+    background: var(--gold-gradient);
+    color: #000000 !important;
+    padding: 12px 28px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+footer {
+    background: #060709;
+    border-top: 1px solid rgba(208, 159, 56, 0.2);
+    padding: 60px 5% 30px;
+    margin-top: 50px;
+}
+
+.footer-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h4 { color: var(--pure-white); font-size: 16px; margin-bottom: 20px; text-transform: uppercase; }
+.footer-column p, .footer-column a { color: #a3b1c6; font-size: 14px; text-decoration: none; margin-bottom: 12px; display: block; }
+.footer-column a:hover { color: var(--gold-mid); }
+.bottom-bar { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; text-align: center; font-size: 13px; color: #626d7a; }
+
+@media (max-width: 768px) {
+    .nav-menu { display: none; }
+}
+
+/* ==========================================================================
    KINGS CABS LLOYDMINSTER - SEPARATE PRIVACY POLICY STYLESHEET
    ========================================================================== */
 

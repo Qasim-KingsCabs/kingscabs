@@ -1,0 +1,271 @@
+/* ==========================================================================
+   KINGS CABS LLOYDMINSTER - ABOUT US PAGE CONTENT STYLESHEET
+   ========================================================================== */
+
+/* 1. Page Content Architecture Base */
+body {
+    background-color: #0b0c10;
+    color: #f5f5f7;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 2. Brand Hero Header */
+.about-hero {
+    background: linear-gradient(to bottom, rgba(11, 12, 16, 0.95), rgba(19, 26, 36, 0.95));
+    padding: 80px 5% 50px;
+    text-align: center;
+    border-bottom: 1px solid rgba(208, 159, 56, 0.15);
+}
+
+.about-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gold-subtitle {
+    color: #d09f38;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.about-hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.hero-tagline {
+    font-size: 16px;
+    color: #a3b1c6;
+}
+
+/* 3. Document Base Structure */
+.about-main-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+}
+
+.about-intro-block p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #dfe6ed;
+    margin-bottom: 25px;
+}
+
+.content-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(208, 159, 56, 0.25), transparent);
+    margin: 50px 0;
+}
+
+/* 4. Section Heading Treatments */
+.about-section {
+    margin-bottom: 60px;
+}
+
+.about-section h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-left: 4px solid #ba7e21;
+    padding-left: 14px;
+}
+
+.about-section p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #a3b1c6;
+    margin-bottom: 30px;
+}
+
+.section-desc {
+    margin-bottom: 35px !important;
+}
+
+/* 5. Features Grid Layout */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.feature-card {
+    background: #1f2833;
+    border: 1px solid rgba(208, 159, 56, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: #d09f38;
+}
+
+.card-badge {
+    background: linear-gradient(135deg, #ba7e21, #d09f38);
+    color: #000000;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #a3b1c6;
+    margin-bottom: 0;
+}
+
+/* 6. Premium Responsive Web Table */
+.table-scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid rgba(208, 159, 56, 0.15);
+    background: #11141a;
+}
+
+.services-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+    min-width: 650px;
+}
+
+.services-matrix-table th {
+    background: #1f2833;
+    color: #ffffff;
+    padding: 16px 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(208, 159, 56, 0.2);
+}
+
+.services-matrix-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #a3b1c6;
+    line-height: 1.6;
+    vertical-align: top;
+}
+
+.services-matrix-table tr:last-child td {
+    border-bottom: none;
+}
+
+.gold-text {
+    color: #d09f38;
+    font-weight: 600;
+}
+
+/* 7. Secondary Content Headers (H3 Sub-sections) */
+.deep-dive-block h3 {
+    font-size: 19px;
+    color: #ffffff;
+    margin-top: 35px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.deep-dive-block p strong {
+    color: #fff088;
+}
+
+/* 8. FAQ Structure Layout */
+.faq-cluster {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-node {
+    background: rgba(31, 40, 51, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.faq-node h4 {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.faq-node p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #a3b1c6;
+    margin-bottom: 0;
+}
+
+.faq-node strong {
+    color: #fff088;
+}
+
+/* 9. Standalone CTA Outro Card */
+.about-cta-panel {
+    background: linear-gradient(135deg, #11141a 0%, #1f2833 100%);
+    border: 1px solid #d09f38;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    margin-top: 80px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-cta-panel h2 {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.about-cta-panel p {
+    font-size: 15px;
+    color: #a3b1c6;
+    max-width: 750px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+}
+
+.panel-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 10. Device Sizing Breakpoints */
+@media (max-width: 768px) {
+    .about-hero { padding: 60px 4% 35px; }
+    .about-hero h1 { font-size: 28px; }
+    .about-main-container { padding-top: 40px; }
+    .about-section h2 { font-size: 20px; }
+    .about-cta-panel h2 { font-size: 22px; }
+}

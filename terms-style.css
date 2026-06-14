@@ -1,0 +1,195 @@
+/* ==========================================================================
+   KINGS CABS LLOYDMINSTER - TERMS & CONDITIONS SECTION STYLESHEET
+   ========================================================================== */
+
+/* 1. Page Frame Infrastructure */
+body {
+    background-color: #0b0c10;
+    color: #f5f5f7;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 2. Brand Hero Legal Banner */
+.terms-hero {
+    background: linear-gradient(to bottom, rgba(11, 12, 16, 0.95), rgba(19, 26, 36, 0.95));
+    padding: 60px 5% 40px;
+    text-align: center;
+    border-bottom: 1px solid rgba(208, 159, 56, 0.15);
+}
+
+.terms-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gold-subtitle {
+    color: #d09f38;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.terms-hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.effective-date {
+    font-size: 14px;
+    color: #626d7a;
+}
+
+/* 3. Central Document Wrapper */
+.terms-main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px 100px;
+}
+
+.terms-intro {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #dfe6ed;
+    margin-bottom: 30px;
+}
+
+.terms-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(208, 159, 56, 0.3), transparent);
+    margin-bottom: 40px;
+}
+
+/* 4. Terms Paragraph & List Clauses */
+.terms-section {
+    margin-bottom: 40px;
+}
+
+.terms-section h2 {
+    font-size: 22px;
+    color: #d09f38;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-left: 3px solid #ba7e21;
+    padding-left: 12px;
+}
+
+.terms-section h3 {
+    font-size: 17px;
+    color: #ffffff;
+    margin: 20px 0 10px;
+    font-weight: 500;
+}
+
+.terms-section p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #a3b1c6;
+    margin-bottom: 15px;
+}
+
+.terms-section ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.terms-section ul li {
+    font-size: 15px;
+    color: #a3b1c6;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    list-style-type: square;
+}
+
+.terms-section ul li::marker {
+    color: #d09f38;
+}
+
+.sub-clause {
+    font-style: italic;
+    color: #dfe6ed !important;
+}
+
+/* 5. Corporate Disclaimer Accordion Blocks */
+.disclaimer-block {
+    background: rgba(31, 40, 51, 0.2);
+    border: 1px solid rgba(208, 159, 56, 0.1);
+    border-radius: 8px;
+    padding: 35px 25px;
+    margin: 50px 0;
+}
+
+.disclaimer-block h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.disclaimer-node {
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 20px;
+}
+
+.disclaimer-node:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.disclaimer-node h4 {
+    font-size: 16px;
+    color: #d09f38;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.disclaimer-node p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #a3b1c6;
+    margin-bottom: 0;
+}
+
+/* Highlight Box for Consent Clause */
+.highlight-node {
+    background: rgba(208, 159, 56, 0.05);
+    border: 1px dashed rgba(208, 159, 56, 0.25);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+/* 6. Corporate Info Grid Box */
+.terms-contact-box {
+    background: #11141a;
+    border: 1px dashed rgba(208, 159, 56, 0.3);
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.terms-contact-box p {
+    margin-bottom: 10px !important;
+    font-size: 15px;
+    color: #dfe6ed;
+}
+
+.terms-contact-box p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* 7. Fluid Mobile Adaptation Layouts */
+@media (max-width: 768px) {
+    .terms-hero h1 { font-size: 28px; }
+    .terms-main-container { padding-top: 30px; }
+    .terms-section h2 { font-size: 19px; }
+    .disclaimer-block { padding: 20px 15px; }
+    .disclaimer-block h2 { font-size: 20px; }
+}

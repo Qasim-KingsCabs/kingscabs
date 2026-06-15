@@ -1,0 +1,16 @@
+# Global directives for all search engine crawlers
+User-agent: *
+
+# Allow crawling of the main site directory structure
+Allow: /
+
+# Block crawlers from indexing specific standalone style sheets to save crawl budget
+Disallow: /Privacy.css
+Disallow: /styles.css
+Disallow: /about.css
+Disallow: /contact-style.css
+Disallow: /faq-style.css
+Disallow: /terms-style.css
+
+# Explicitly point search engines to your optimized XML sitemap
+Sitemap: https://kingscabs.ca/sitemap.xml

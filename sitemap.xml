@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    
-    <!-- 1. Main Homepage Landing Page Route -->
-    <url>
-        <loc>https://qasim-kingscabs.github.io/kingscabs/</loc>
-        <lastmod>2026-06-14</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.00</priority>
-    </url>
-    
-    <!-- 2. Isolated Privacy Policy Legal Documentation Page -->
-    <url>
-        <loc>https://qasim-kingscabs.github.io/kingscabs/privacy.html</loc>
-        <lastmod>2026-06-14</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.30</priority>
-    </url>
-    
-    <!-- 3. Isolated About Us Page -->
-    <url>
-        <loc>https://qasim-kingscabs.github.io/kingscabs/about.html</loc>
-        <lastmod>2026-06-14</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.80</priority>
-    </url>
+  
+  <!-- Homepage / Core Dispatch Hub -->
+  <url>
+    <loc>https://kingscabs.ca/index.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- About Us Page -->
+  <url>
+    <loc>https://kingscabs.ca/about.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Contact Us Page -->
+  <url>
+    <loc>https://kingscabs.ca/contact.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Frequently Asked Questions (FAQ) -->
+  <url>
+    <loc>https://kingscabs.ca/faq.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Terms & Conditions / Disclaimer -->
+  <url>
+    <loc>https://kingscabs.ca/terms.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://kingscabs.ca/Privacy_Policy.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
 
 </urlset>

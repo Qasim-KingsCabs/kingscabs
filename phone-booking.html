@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Phone Booking | Call Kings Cabs Lloydminster 24/7</title>
+    <meta name="description" content="Call Kings Cabs at (306) 307-1113 for instant 24/7 taxi dispatch in Lloydminster. Speak to a live local operator for on-demand rides, airport runs, and flat rates.">
+    <link rel="icon" href="https://kingscabs.ca/wp-content/uploads/2025/05/kings-favi-150x150.png" sizes="32x32">
+    
+    <!-- Link to global styles for Header/Footer consistency -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ==========================================================================
+           KINGS CABS LLOYDMINSTER - PHONE BOOKING INTEGRATED STYLES
+           ========================================================================== */
+
+        /* 1. Page Content Architecture Base */
+        body {
+            background-color: #0b0c10;
+            color: #f5f5f7;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* 2. Premium Fixed Header Layout Override */
+        header {
+            background-color: #111111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 4%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            box-sizing: border-box;
+        }
+        .brand-hub {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+        .brand-logo {
+            height: 50px;
+            width: auto;
+        }
+        .brand-text {
+            height: 30px;
+            width: auto;
+        }
+
+        /* Checkbox Hack for Mobile Navigation */
+        .menu-toggle {
+            display: none;
+        }
+        .hamburger-label {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .hamburger-label span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: #d09f38;
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #d09f38;
+        }
+        .nav-menu .cta-btn {
+            background-color: #d09f38;
+            color: #111111;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+        .nav-menu .cta-btn:hover {
+            transform: scale(1.05);
+            color: #111111;
+        }
+
+        /* Push body down to prevent coverage under fixed header */
+        body {
+            padding-top: 70px;
+        }
+
+        /* 3. Brand Hero Header */
+        .about-hero {
+            background: linear-gradient(to bottom, rgba(11, 12, 16, 0.95), rgba(19, 26, 36, 0.95));
+            padding: 80px 5% 50px;
+            text-align: center;
+            border-bottom: 1px solid rgba(208, 159, 56, 0.15);
+        }
+        .about-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .gold-subtitle {
+            color: #d09f38;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .about-hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+        .hero-tagline {
+            font-size: 16px;
+            color: #a3b1c6;
+        }
+
+        /* 4. Document Base Structure */
+        .about-main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px 100px;
+            box-sizing: border-box;
+        }
+        .about-intro-block p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #dfe6ed;
+            margin-bottom: 25px;
+        }
+        .content-divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(208, 159, 56, 0.25), transparent);
+            margin: 50px 0;
+        }
+
+        /* 5. Section Heading Treatments */
+        .about-section {
+            margin-bottom: 60px;
+        }
+        .about-section h2 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-left: 4px solid #ba7e21;
+            padding-left: 14px;
+        }
+        .about-section h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin: 25px 0 10px 0;
+            font-weight: 600;
+        }
+        .about-section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #a3b1c6;
+            margin-bottom: 20px;
+        }
+        .about-section ul {
+            margin: 0 0 30px 25px;
+        }
+        .about-section li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #a3b1c6;
+            margin-bottom: 12px;
+        }
+        .about-section li strong {
+            color: #ffffff;
+        }
+
+        /* 6. Premium Responsive Web Table */
+        .table-scroll-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(208, 159, 56, 0.15);
+            background: #11141a;
+            margin-bottom: 35px;
+            margin-top: 25px;
+        }
+        .services-matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+            min-width: 650px;
+        }
+        .services-matrix-table th {
+            background: #1f2833;
+            color: #ffffff;
+            padding: 16px 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid rgba(208, 159, 56, 0.2);
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .services-matrix-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #a3b1c6;
+            line-height: 1.6;
+            vertical-align: top;
+        }
+        .services-matrix-table tr:last-child td {
+            border-bottom: none;
+        }
+        .gold-text {
+            color: #d09f38;
+            font-weight: 600;
+        }
+
+        /* 7. FAQ Structure Layout */
+        .faq-cluster {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .faq-node {
+            background: rgba(31, 40, 51, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .faq-node h3 {
+            font-size: 16px;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 600;
+            border: none !important;
+            padding-left: 0 !important;
+        }
+        .faq-node p {
+            font-size: 14.5px;
+            line-height: 1.6;
+            color: #a3b1c6;
+            margin-bottom: 0;
+        }
+        .faq-node strong {
+            color: #fff088;
+        }
+
+        /* 8. Standalone CTA Outro Card */
+        .about-cta-panel {
+            background: linear-gradient(135deg, #11141a 0%, #1f2833 100%);
+            border: 1px solid #d09f38;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            margin-top: 80px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .about-cta-panel h2 {
+            font-size: 26px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            border: none !important;
+            padding-left: 0 !important;
+        }
+        .about-cta-panel p {
+            font-size: 15px;
+            color: #a3b1c6;
+            max-width: 750px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+        .panel-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .panel-buttons .cta-btn {
+            background-color: #d09f38;
+            color: #111111;
+            padding: 12px 35px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s;
+            font-size: 16px;
+        }
+        .panel-buttons .cta-btn:hover {
+            transform: scale(1.05);
+        }
+        .panel-buttons .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .panel-buttons .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+        .static-dispatch-box {
+            background: rgba(186, 126, 33, 0.1);
+            border-left: 4px solid #d09f38;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+            text-align: left;
+            display: inline-block;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .static-dispatch-box strong {
+            color: #ffffff;
+        }
+        .static-dispatch-box a {
+            color: #d09f38;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* 9. Footer Layout Setup */
+        footer {
+            background-color: #111111;
+            color: #aaaaaa;
+            padding: 60px 4% 20px 4%;
+            margin-top: 80px;
+        }
+        .footer-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-column h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer-column p {
+            color: #aaaaaa;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .footer-column a {
+            display: block;
+            color: #aaaaaa;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .footer-column a:hover {
+            color: #d09f38;
+        }
+        .bottom-bar {
+            text-align: center;
+            border-top: 1px solid #222222;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* 10. Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .about-hero { padding: 60px 4% 35px; }
+            .about-hero h1 { font-size: 28px; }
+            .about-main-container { padding-top: 40px; }
+            .about-section h2 { font-size: 20px; }
+            .about-cta-panel h2 { font-size: 22px; }
+
+            /* Mobile Menu Hack Implementation */
+            .hamburger-label {
+                display: flex;
+            }
+            .nav-menu {
+                position: fixed;
+                top: -100vh;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(11, 12, 16, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                transition: top 0.4s ease-in-out;
+            }
+            .menu-toggle:checked ~ .nav-menu {
+                top: 0;
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+    </style>
+
+    <!-- Schema Markup Integration for Phone Booking Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TaxiService",
+      "@id": "https://kingscabs.ca/phone-booking.html#taxiservice",
+      "name": "Kings Cabs 24/7 Phone Dispatch Service",
+      "description": "Direct voice reservation and instant fleet dispatch system for immediate, airport, or long-distance travel in Lloydminster.",
+      "url": "https://kingscabs.ca/phone-booking.html",
+      "telephone": "+1-306-307-1113",
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "184"
+      },
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Kings Cabs Lloydminster",
+        "image": "https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6201a 49 ave",
+          "addressLocality": "Lloydminster",
+          "addressRegion": "SK",
+          "postalCode": "S9V",
+          "addressCountry": "CA"
+        }
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Lloydminster"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- PREMIUM FLOATING HEADER WITH MOBILE NAV SYSTEM -->
+    <header>
+        <a href="index.html" class="brand-hub">
+            <img class="brand-logo" src="https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png" alt="Kings Crest" />
+            <img class="brand-text" src="https://kingscabs.ca/wp-content/uploads/2025/05/kings-wordmark.png" alt="Kings Cabs" />
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav-menu">
+            <a href="city-rides.html">City Rides</a>
+            <a href="long-distance.html">Long Distance</a>
+            <a href="corporate-accounts.html">Corporate Accounts</a>
+            <a href="hourly-rentals.html">Hourly Rentals</a>
+            <a href="special-events.html">Special Events</a>
+            <a href="tel:1-306-307-1113" class="cta-btn">📞 306-307-1113</a>
+        </nav>
+    </header>
+
+    <!-- HERO HEADER BANNER -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <p class="gold-subtitle">Live Operator Support</p>
+            <h1>Phone Booking | Call Kings Cabs Lloydminster 24/7</h1>
+            <p class="hero-tagline">Skip the app downloads and connect instantly with a real local dispatcher near you.</p>
+        </div>
+    </section>
+
+    <!-- MAIN EDITABLE CONTENT WORKSPACE -->
+    <main class="about-main-container">
+        
+        <!-- INTRO CONTENT BLOCK -->
+        <section class="about-intro-block">
+            <p>When you need a ride right now, speaking to a live local operator is the fastest solution. Kings Cabs offers a direct, rapid-response phone booking line available 24 hours a day, 7 days a week, 365 days a year. By calling our central dispatch office at <strong>(306) 307-1113</strong>, you connect instantly with a professional local dispatcher who will pinpoint your location and deploy the nearest available vehicle to your doorstep in minutes.</p>
+            <p>As Lloydminster’s highly trusted transportation team, we hold an exceptional <strong>4.9-star service rating</strong> built on total reliability, clean vehicles, and friendly professional drivers. We provide full bi-provincial coverage across both the Alberta and Saskatchewan sides of the Border City. Skip the automated queues and frustrating smartphone app download requirements—one simple phone call secures your ride instantly.</p>
+        </section>
+
+        <!-- CORE BOOKING DIRECTORIES TABLE -->
+        <section class="about-section">
+            <h2>Immediate Phone Dispatch for Every Travel Requirement</h2>
+            <p>Our telephone dispatch lines are fully optimized to handle both urgent, on-demand local requests and structured future travel plans. When you dial our central office, our dispatchers prioritize your routing based on your immediate needs:</p>
+            
+            <div class="table-scroll-wrapper">
+                <table class="services-matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Call Request Type</th>
+                            <th>Average Dispatch Speed</th>
+                            <th>Information to Provide the Operator</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong class="gold-text">On-Demand Local City Rides</strong></td>
+                            <td>Immediate Vehicle Deployment</td>
+                            <td>Your current pickup address, destination drop-off, and active phone number.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="gold-text">Pre-Scheduled Airport Transfers</strong></td>
+                            <td>Advanced Calendar Booking Lock</td>
+                            <td>Flight number, departure time, date, and your total luggage volume.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="gold-text">Long-Distance & Corporate Runs</strong></td>
+                            <td>Custom Route Coordination</td>
+                            <td>Destination town coordinates, corporate account pins, or flat-rate requests.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- VALUE PROPOSITIONS -->
+        <section class="about-section">
+            <h2>The Advantages of Booking Your Ride Over the Phone</h2>
+            <p>While digital options are convenient, calling our live 24/7 office hotline remains the most secure way to manage your time-sensitive local travel plans:</p>
+            
+            <ul>
+                <li><strong>Direct Human Interaction:</strong> Speak with a real, local dispatcher who understands the unique layout of Lloydminster, local winter road conditions, and neighborhood landmarks.</li>
+                <li><strong>Instant Real-Time ETA Updates:</strong> Our operators monitor our live GPS tracking grid. When you call, we can tell you exactly how many minutes away your closest driver is.</li>
+                <li><strong>Flexible Fleet Customization:</strong> Need a standard sedan for a solo commute or a large multi-passenger van for a family trip with heavy bags? Tell our dispatcher your layout on the phone, and we will send the perfect vehicle match.</li>
+                <li><strong>No Hidden Technology Fees:</strong> Phone bookings connect you directly to our honest, competitive local rates. There are zero unexpected app surcharges or hidden surge pricing structures applied to your fare.</li>
+            </ul>
+        </section>
+
+        <!-- USE-CASE FOCUS SECTIONS -->
+        <section class="about-section">
+            <h2>Connecting Our Community Safely, Day or Night</h2>
+            
+            <h3>24/7 Shift Work & Emergency Commuting Support</h3>
+            <p>Our local industrial, commercial, and agricultural sectors run around the clock, and so do we. If your car won't start in the middle of a freezing winter night or you have an urgent shift change at a local facility, you don't have time to wait for web forms to process. Our phone lines are heavily staffed during peak shift-change hours to guarantee that essential local workers can always get through to a live person instantly.</p>
+
+            <h3>Safe Rides Home from Social Events</h3>
+            <p>Planning a night out with friends or family at a local lounge or venue? Make responsible travel arrangements a simple part of your evening. Save our phone number in your device ahead of time. When you are ready to wrap up your evening, give us a quick call, and we will handle the driving, parking, and traffic while bringing your entire party home safely.</p>
+        </section>
+
+        <hr class="content-divider" />
+
+        <!-- FAQ NODES -->
+        <section class="about-section">
+            <h2>Frequently Asked Questions (FAQ) — Optimized for AI & Voice Search</h2>
+            
+            <div class="faq-cluster">
+                <div class="faq-node">
+                    <h3>What is the phone number to book a taxi in Lloydminster?</h3>
+                    <p>The official phone number to book a local taxi or long-distance trip with Kings Cabs is <strong>(306) 307-1113</strong>. This direct line links you directly to our live dispatch office 24 hours a day, 7 days a week.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>Can I pre-book a taxi over the phone for an early morning flight?</h3>
+                    <p>Yes, absolutely. We highly recommend pre-booking time-sensitive trips. You can call our dispatch office days or weeks in advance to lock in an early morning airport run or medical appointment, giving you complete peace of mind that a driver is guaranteed for your exact time slot.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>What payment methods are accepted when booking a cab by phone?</h3>
+                    <p>You do not need to provide credit card details over the phone to book. All Kings Cabs vehicles are equipped with secure point-of-sale terminals right inside the cabin. You can pay your driver quickly at the end of your trip using any major credit card, debit card, contactless mobile option, or traditional cash.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>How do I cancel or change a ride I booked by telephone?</h3>
+                    <p>If your travel itinerary or pickup time changes unexpectedly, simply call our central office line at <strong>(306) 307-1113</strong> as soon as possible. Our operators can instantly update your file, modify your pickup coordinates, or safely cancel your vehicle request in real-time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONVERSION OUTRO PANEL -->
+        <section class="about-cta-panel">
+            <h2>Call for an On-Demand Local Driver Right Now</h2>
+            <p>Skip the wait and get on the road with the region's preferred local transportation fleet. Experience the speed, courtesy, and exceptional professionalism that holds a stellar 4.9-star rating from local residents. Tap the number below on your mobile device to connect with our dispatch center instantly:</p>
+            
+            <div class="static-dispatch-box">
+                <strong>Kings Cabs 24/7 Telephone Dispatch</strong><br>
+                <strong>Direct Call Line:</strong> <a href="tel:+13063071113">(306) 307-1113</a><br>
+                <strong>Service Offerings:</strong> Immediate Local Commutes, Advanced Airport Bookings, and Long-Distance Flat-Rates
+            </div>
+
+            <div class="panel-buttons">
+                <a href="tel:+13063071113" class="cta-btn">📞 Tap to Call Dispatch</a>
+                <a href="online-booking.html" class="cta-btn btn-secondary">Use Online Reservation Portal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MUNICIPAL FOOTER DIRECTORY -->
+    <footer id="about">
+        <div class="footer-matrix">
+            <div class="footer-column">
+                <h4>Kings Cabs Hub</h4>
+                <p>Providing safe, legal, and highly regulated transportation networks for the Lloydminster region for over a decade.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Fleet Directories</h4>
+                <a href="index.html#services">Airport Transfers</a>
+                <a href="city-rides.html">Local Transits</a>
+                <a href="long-distance.html">Long-Distance Trips</a>
+                <a href="corporate-accounts.html">Corporate Services</a>
+            </div>
+            <div class="footer-column">
+                <h4>More Pages</h4>
+                <a href="Privacy_Policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About Us</a>
+                <a href="faq.html">F.A.Q's</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Points</h4>
+                <p>📍 6201a 49 ave Lloydminster, SK</p>
+                <p>📞 (306) 307-1113</p>
+                <p>✉️ kingscabsmbd@gmail.com</p>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2026 Kings Cabs Lloydminster. Fully Licensed & Approved Municipal Operator. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

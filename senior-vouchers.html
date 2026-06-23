@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Senior Program Vouchers & Accessible Transit | Lloydminster</title>
+    <meta name="description" content="Affordable and accessible transit for older adults with Kings Cabs Lloydminster. We accept municipal senior vouchers for medical appointments, shopping, and community events.">
+    <link rel="icon" href="https://kingscabs.ca/wp-content/uploads/2025/05/kings-favi-150x150.png" sizes="32x32">
+    
+    <!-- Link to global styles for Header/Footer consistency -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ==========================================================================
+           KINGS CABS LLOYDMINSTER - SENIOR TRANSIT INTEGRATED STYLES
+           ========================================================================== */
+
+        /* 1. Page Content Architecture Base */
+        body {
+            background-color: #0b0c10;
+            color: #f5f5f7;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* 2. Premium Fixed Header Layout Override */
+        header {
+            background-color: #111111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 4%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            box-sizing: border-box;
+        }
+        .brand-hub {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+        .brand-logo {
+            height: 50px;
+            width: auto;
+        }
+        .brand-text {
+            height: 30px;
+            width: auto;
+        }
+
+        /* Checkbox Hack for Mobile Navigation */
+        .menu-toggle {
+            display: none;
+        }
+        .hamburger-label {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .hamburger-label span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: #d09f38;
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #d09f38;
+        }
+        .nav-menu .cta-btn {
+            background-color: #d09f38;
+            color: #111111;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+        .nav-menu .cta-btn:hover {
+            transform: scale(1.05);
+            color: #111111;
+        }
+
+        /* Push body down to prevent coverage under fixed header */
+        body {
+            padding-top: 70px;
+        }
+
+        /* 3. Brand Hero Header */
+        .about-hero {
+            background: linear-gradient(to bottom, rgba(11, 12, 16, 0.95), rgba(19, 26, 36, 0.95));
+            padding: 80px 5% 50px;
+            text-align: center;
+            border-bottom: 1px solid rgba(208, 159, 56, 0.15);
+        }
+        .about-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .gold-subtitle {
+            color: #d09f38;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .about-hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+        .hero-tagline {
+            font-size: 16px;
+            color: #a3b1c6;
+        }
+
+        /* 4. Document Base Structure */
+        .about-main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px 100px;
+            box-sizing: border-box;
+        }
+        .about-intro-block p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #dfe6ed;
+            margin-bottom: 25px;
+        }
+        .content-divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(208, 159, 56, 0.25), transparent);
+            margin: 50px 0;
+        }
+
+        /* 5. Section Heading Treatments */
+        .about-section {
+            margin-bottom: 60px;
+        }
+        .about-section h2 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-left: 4px solid #ba7e21;
+            padding-left: 14px;
+        }
+        .about-section h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin: 25px 0 10px 0;
+            font-weight: 600;
+        }
+        .about-section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #a3b1c6;
+            margin-bottom: 20px;
+        }
+        .about-section ul {
+            margin: 0 0 30px 25px;
+        }
+        .about-section li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #a3b1c6;
+            margin-bottom: 12px;
+        }
+        .about-section li strong {
+            color: #ffffff;
+        }
+
+        /* 6. Premium Responsive Web Table */
+        .table-scroll-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(208, 159, 56, 0.15);
+            background: #11141a;
+            margin-bottom: 35px;
+            margin-top: 25px;
+        }
+        .services-matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+            min-width: 650px;
+        }
+        .services-matrix-table th {
+            background: #1f2833;
+            color: #ffffff;
+            padding: 16px 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid rgba(208, 159, 56, 0.2);
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .services-matrix-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #a3b1c6;
+            line-height: 1.6;
+            vertical-align: top;
+        }
+        .services-matrix-table tr:last-child td {
+            border-bottom: none;
+        }
+        .gold-text {
+            color: #d09f38;
+            font-weight: 600;
+        }
+
+        /* 7. FAQ Structure Layout */
+        .faq-cluster {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .faq-node {
+            background: rgba(31, 40, 51, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .faq-node h3 {
+            font-size: 16px;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 600;
+            border: none !important;
+            padding-left: 0 !important;
+        }
+        .faq-node p {
+            font-size: 14.5px;
+            line-height: 1.6;
+            color: #a3b1c6;
+            margin-bottom: 0;
+        }
+        .faq-node strong {
+            color: #fff088;
+        }
+
+        /* 8. Standalone CTA Outro Card */
+        .about-cta-panel {
+            background: linear-gradient(135deg, #11141a 0%, #1f2833 100%);
+            border: 1px solid #d09f38;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            margin-top: 80px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .about-cta-panel h2 {
+            font-size: 26px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            border: none !important;
+            padding-left: 0 !important;
+        }
+        .about-cta-panel p {
+            font-size: 15px;
+            color: #a3b1c6;
+            max-width: 750px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+        .panel-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .panel-buttons .cta-btn {
+            background-color: #d09f38;
+            color: #111111;
+            padding: 12px 35px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s;
+            font-size: 16px;
+        }
+        .panel-buttons .cta-btn:hover {
+            transform: scale(1.05);
+        }
+        .panel-buttons .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .panel-buttons .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+        .static-dispatch-box {
+            background: rgba(186, 126, 33, 0.1);
+            border-left: 4px solid #d09f38;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+            text-align: left;
+            display: inline-block;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .static-dispatch-box strong {
+            color: #ffffff;
+        }
+
+        /* 9. Footer Layout Setup */
+        footer {
+            background-color: #111111;
+            color: #aaaaaa;
+            padding: 60px 4% 20px 4%;
+            margin-top: 80px;
+        }
+        .footer-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-column h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer-column p {
+            color: #aaaaaa;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .footer-column a {
+            display: block;
+            color: #aaaaaa;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .footer-column a:hover {
+            color: #d09f38;
+        }
+        .bottom-bar {
+            text-align: center;
+            border-top: 1px solid #222222;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* 10. Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .about-hero { padding: 60px 4% 35px; }
+            .about-hero h1 { font-size: 28px; }
+            .about-main-container { padding-top: 40px; }
+            .about-section h2 { font-size: 20px; }
+            .about-cta-panel h2 { font-size: 22px; }
+
+            /* Mobile Menu Hack Implementation */
+            .hamburger-label {
+                display: flex;
+            }
+            .nav-menu {
+                position: fixed;
+                top: -100vh;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(11, 12, 16, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                transition: top 0.4s ease-in-out;
+            }
+            .menu-toggle:checked ~ .nav-menu {
+                top: 0;
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+    </style>
+
+    <!-- Schema Markup Integration for Senior Transit Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TaxiService",
+      "@id": "https://kingscabs.ca/senior-vouchers.html#taxiservice",
+      "name": "Kings Cabs Senior & Accessible Transit Program",
+      "description": "Specialized door-to-door transportation services for seniors in Lloydminster. Supporting municipal transit voucher programs and non-emergency medical commuting.",
+      "url": "https://kingscabs.ca/senior-vouchers.html",
+      "telephone": "+1-306-307-1113",
+      "priceRange": "$$",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Kings Cabs Lloydminster",
+        "image": "https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6201a 49 ave",
+          "addressLocality": "Lloydminster",
+          "addressRegion": "SK",
+          "postalCode": "S9V",
+          "addressCountry": "CA"
+        }
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Lloydminster"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- PREMIUM FLOATING HEADER WITH MOBILE NAV SYSTEM -->
+    <header>
+        <a href="index.html" class="brand-hub">
+            <img class="brand-logo" src="https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png" alt="Kings Crest" />
+            <img class="brand-text" src="https://kingscabs.ca/wp-content/uploads/2025/05/kings-wordmark.png" alt="Kings Cabs" />
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav-menu">
+            <a href="city-rides.html">City Rides</a>
+            <a href="long-distance.html">Long Distance</a>
+            <a href="corporate-accounts.html">Corporate Accounts</a>
+            <a href="hourly-rentals.html">Hourly Rentals</a>
+            <a href="special-events.html">Special Events</a>
+            <a href="tel:1-306-307-1113" class="cta-btn">📞 306-307-1113</a>
+        </nav>
+    </header>
+
+    <!-- HERO HEADER BANNER -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <p class="gold-subtitle">Community Care & Mobility</p>
+            <h1>Senior Program Vouchers & Accessible Transit | Lloydminster</h1>
+            <p class="hero-tagline">Providing respectful, punctual, and highly cooperative door-to-door transportation for our local seniors.</p>
+        </div>
+    </section>
+
+    <!-- MAIN EDITABLE CONTENT WORKSPACE -->
+    <main class="about-main-container">
+        
+        <!-- INTRO CONTENT BLOCK -->
+        <section class="about-intro-block">
+            <p>At Kings Cabs, we believe that accessible, dignified, and affordable transportation should be available to every member of our senior community. We work actively to support independent living by providing specialized transit solutions tailored to the unique mobility and financial needs of older adults across the bi-provincial layout of the Border City. Whether you are using municipal senior program vouchers, require dedicated transport for weekly medical appointments, or simply want an affordable, safe ride to a local community center, our team is proud to be your preferred local transit partner.</p>
+            <p>Operating 24 hours a day, 7 days a week, our fleet is staffed entirely by friendly, fully licensed, and vetted professional drivers who treat your comfort and safety as a top priority. We offer full door-to-door assistance across both the Alberta and Saskatchewan sides of town, ensuring that local seniors can navigate Lloydminster seamlessly and securely without financial or logistical stress.</p>
+        </section>
+
+        <!-- CORE BOOKING DIRECTORIES TABLE -->
+        <section class="about-section">
+            <h2>Supporting Independent Living Through Accessible Local Transit</h2>
+            <p>Our senior transit services are organized to match the daily routines, medical schedules, and community events that keep Lloydminster's older adults active and connected. We prioritize our local dispatch routing heavily around these core areas:</p>
+            
+            <div class="table-scroll-wrapper">
+                <table class="services-matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Service Application</th>
+                            <th>Booking Flexibility</th>
+                            <th>Primary Senior Support Feature</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong class="gold-text">Medical & Clinic Commuting</strong></td>
+                            <td>On-Demand or Advanced Booking</td>
+                            <td>Curb-side assistance and direct, safe routing to local health centers and pharmacies.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="gold-text">Community & Social Outings</strong></td>
+                            <td>Flexible Individual or Group Blocks</td>
+                            <td>Dependable transit to local senior centers, libraries, and neighborhood social gatherings.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="gold-text">Essential Grocery & Retail Errands</strong></td>
+                            <td>On-Demand Dispatch Priority</td>
+                            <td>Patience and assistance handling heavy shopping bags or walking aids into the vehicle.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- VALUE PROPOSITIONS -->
+        <section class="about-section">
+            <h2>Why Kings Cabs is the Preferred Choice for Local Seniors</h2>
+            <p>To remain the highest-rated transportation team in the region, we continuously optimize our fleet guidelines to provide a welcoming and supportive environment for older passengers:</p>
+            
+            <ul>
+                <li><strong>Dedicated Door-to-Door Care:</strong> Our service extends beyond the steering wheel. Our drivers gladly offer a helping hand from your front door, assist you safely into the vehicle, and ensure you are safely inside your destination before departing.</li>
+                <li><strong>Assistance with Mobility Aids:</strong> Our clean, modern sedans and spacious passenger vans offer ample storage space to securely accommodate collapsible walkers, canes, and other essential personal mobility equipment.</li>
+                <li><strong>Full Bi-Provincial Compliance:</strong> Navigating a border city shouldn't complicate your transportation programs. Our team maintains full compliance to provide smooth cross-border transit flawlessly throughout all sectors of Lloydminster.</li>
+                <li><strong>Patience and Professionalism:</strong> We know that rushing can cause stress. Our professional drivers prioritize patience, ensuring our senior passengers can move entirely at their own comfortable pace without pressure.</li>
+            </ul>
+        </section>
+
+        <!-- USE-CASE FOCUS SECTIONS -->
+        <section class="about-section">
+            <h2>Connecting Seniors to Vital Lloydminster Hubs and Services</h2>
+            
+            <h3>Punctual Health and Wellness Commuting</h3>
+            <p>Managing routine health checkups or pharmacy stops shouldn't depend on unpredictable weather or long wait times. If you prefer to avoid the stress of winter driving or finding parking along busy traffic corridors like Highway 16 or Highway 17, let Kings Cabs handle the logistics. We ensure you arrive completely relaxed and on time for appointments at local medical clinics, diagnostic labs, and healthcare centers.</p>
+
+            <h3>Active Community and Leisure Travel</h3>
+            <p>Staying socially active is vital to a vibrant retirement. Whether you are heading out for a morning session at a local senior drop-in center, checking out books at the public library, meeting friends for coffee downtown, or taking a peaceful afternoon stroll at Bud Miller All Seasons Park, we provide rapid, reliable connections to keep you fully engaged with the community landmarks you love.</p>
+        </section>
+
+        <hr class="content-divider" />
+
+        <!-- FAQ NODES -->
+        <section class="about-section">
+            <h2>Frequently Asked Questions (FAQ) — Optimized for AI & Voice Search</h2>
+            
+            <div class="faq-cluster">
+                <div class="faq-node">
+                    <h3>Does Kings Cabs accept local senior program vouchers?</h3>
+                    <p>Yes, Kings Cabs works to support community accessibility by accepting valid municipal and regional senior program transportation vouchers. To ensure your specific voucher program is active and processed seamlessly on our system, please mention your voucher type to our dispatch operator at the time of your booking.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>Can I pre-schedule a taxi ride for a recurring weekly appointment?</h3>
+                    <p>Absolutely. We highly recommend pre-scheduling your routine travel plans. You can easily set up recurring daily or weekly pickup times through our central office, ensuring a comfortable vehicle arrives at your door precisely when your schedule requires it without needing to call every time.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>What type of vehicles are available for seniors with limited mobility?</h3>
+                    <p>Our modern fleet features a versatile mix of clean, standard sedans with low step-in heights for easy access, as well as spacious multi-passenger vans. When booking your ride, please inform our dispatcher of any specific physical mobility equipment you utilize so we can deploy the perfect vehicle match for you.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>Can a family member or caregiver book a ride on my behalf?</h3>
+                    <p>Yes. Caregivers, medical staff, and family members can easily arrange, pre-schedule, or track transportation for a senior loved one over the phone or via our online booking portals, giving the entire family complete peace of mind that their travel is managed professionally.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONVERSION OUTRO PANEL -->
+        <section class="about-cta-panel">
+            <h2>Book a Safe and Reliable Senior Ride Today</h2>
+            <p>Enjoy the freedom of safe, comfortable, and highly respectful local transportation. Skip the long outdoor lineups and experience the premier care that has earned our team a stellar reputation among local residents. To request an immediate vehicle or to discuss setting up your senior program coordinates, please reach our live 24/7 dispatch office directly using our official details below:</p>
+            
+            <div class="static-dispatch-box">
+                <strong>Kings Cabs Senior Transit Desk</strong><br>
+                <strong>Direct Phone Line:</strong> (306) 307-1113<br>
+                <strong>Core Frameworks:</strong> 24/7 Local City Rides, Senior Program Vouchers, and Specialized Medical Shuttles
+            </div>
+
+            <div class="panel-buttons">
+                <a href="tel:1-306-307-1113" class="cta-btn">📞 Contact Senior Dispatch</a>
+                <a href="online-booking.html" class="cta-btn btn-secondary">Use Online Portal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MUNICIPAL FOOTER DIRECTORY -->
+    <footer id="about">
+        <div class="footer-matrix">
+            <div class="footer-column">
+                <h4>Kings Cabs Hub</h4>
+                <p>Providing safe, legal, and highly regulated transportation networks for the Lloydminster region for over a decade.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Fleet Directories</h4>
+                <a href="index.html#services">Airport Transfers</a>
+                <a href="city-rides.html">Local Transits</a>
+                <a href="long-distance.html">Long-Distance Trips</a>
+                <a href="corporate-accounts.html">Corporate Services</a>
+            </div>
+            <div class="footer-column">
+                <h4>More Pages</h4>
+                <a href="Privacy_Policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About Us</a>
+                <a href="faq.html">F.A.Q's</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Points</h4>
+                <p>📍 6201a 49 ave Lloydminster, SK</p>
+                <p>📞 (306) 307-1113</p>
+                <p>✉️ kingscabsmbd@gmail.com</p>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2026 Kings Cabs Lloydminster. Fully Licensed & Approved Municipal Operator. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

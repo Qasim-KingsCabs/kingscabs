@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Hourly Taxi Rentals & Private Driver Services | Lloydminster</title>
+    <meta name="description" content="Book a private taxi and driver by the hour in Lloydminster. Flexible time-block rentals for weddings, corporate tours, and multi-stop errands with 24/7 availability.">
+    <link rel="icon" href="https://kingscabs.ca/wp-content/uploads/2025/05/kings-favi-150x150.png" sizes="32x32">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ==========================================================================
+           KINGS CABS LLOYDMINSTER - HOURLY RENTALS INTEGRATED STYLES
+           ========================================================================== */
+
+        /* 1. Page Content Architecture Base */
+        body {
+            background-color: #0b0c10;
+            color: #f5f5f7;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* 2. Premium Fixed Header Layout Override */
+        header {
+            background-color: #111111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 4%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            box-sizing: border-box;
+        }
+        .brand-hub {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+        .brand-logo {
+            height: 50px;
+            width: auto;
+        }
+        .brand-text {
+            height: 30px;
+            width: auto;
+        }
+
+        /* Checkbox Hack for Mobile Navigation */
+        .menu-toggle {
+            display: none;
+        }
+        .hamburger-label {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .hamburger-label span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: #d09f38;
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #d09f38;
+        }
+        .nav-menu .cta-btn {
+            background-color: #d09f38;
+            color: #111111;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+        .nav-menu .cta-btn:hover {
+            transform: scale(1.05);
+            color: #111111;
+        }
+
+        /* Push body down to prevent coverage under fixed header */
+        body {
+            padding-top: 70px;
+        }
+
+        /* 3. Brand Hero Header */
+        .about-hero {
+            background: linear-gradient(to bottom, rgba(11, 12, 16, 0.95), rgba(19, 26, 36, 0.95));
+            padding: 80px 5% 50px;
+            text-align: center;
+            border-bottom: 1px solid rgba(208, 159, 56, 0.15);
+        }
+        .about-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .gold-subtitle {
+            color: #d09f38;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .about-hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+        .hero-tagline {
+            font-size: 16px;
+            color: #a3b1c6;
+        }
+
+        /* 4. Document Base Structure */
+        .about-main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px 100px;
+            box-sizing: border-box;
+        }
+        .about-intro-block p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #dfe6ed;
+            margin-bottom: 25px;
+        }
+        .content-divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(208, 159, 56, 0.25), transparent);
+            margin: 50px 0;
+        }
+
+        /* 5. Section Heading Treatments */
+        .about-section {
+            margin-bottom: 60px;
+        }
+        .about-section h2 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-left: 4px solid #ba7e21;
+            padding-left: 14px;
+        }
+        .about-section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #a3b1c6;
+            margin-bottom: 30px;
+        }
+        .about-section ul {
+            margin: 0 0 30px 25px;
+        }
+        .about-section li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #a3b1c6;
+            margin-bottom: 12px;
+        }
+        .about-section li strong {
+            color: #ffffff;
+        }
+
+        /* 6. Premium Responsive Web Table */
+        .table-scroll-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(208, 159, 56, 0.15);
+            background: #11141a;
+            margin-bottom: 35px;
+        }
+        .services-matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+            min-width: 650px;
+        }
+        .services-matrix-table th {
+            background: #1f2833;
+            color: #ffffff;
+            padding: 16px 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid rgba(208, 159, 56, 0.2);
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .services-matrix-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #a3b1c6;
+            line-height: 1.6;
+            vertical-align: top;
+        }
+        .services-matrix-table tr:last-child td {
+            border-bottom: none;
+        }
+        .gold-text {
+            color: #d09f38;
+            font-weight: 600;
+        }
+
+        /* 7. Secondary Content Headers (H3 Sub-sections) */
+        .deep-dive-block h3 {
+            font-size: 19px;
+            color: #ffffff;
+            margin-top: 35px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .deep-dive-block p strong {
+            color: #fff088;
+        }
+
+        /* 8. FAQ Structure Layout */
+        .faq-cluster {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .faq-node {
+            background: rgba(31, 40, 51, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .faq-node h3 {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 600;
+            border: none !important;
+            padding-left: 0 !important;
+        }
+        .faq-node p {
+            font-size: 14.5px;
+            line-height: 1.6;
+            color: #a3b1c6;
+            margin-bottom: 0;
+        }
+        .faq-node strong {
+            color: #fff088;
+        }
+
+        /* 9. Standalone CTA Outro Card */
+        .about-cta-panel {
+            background: linear-gradient(135deg, #11141a 0%, #1f2833 100%);
+            border: 1px solid #d09f38;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            margin-top: 80px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .about-cta-panel h2 {
+            font-size: 26px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            border: none !important;
+            padding-left: 0 !important;
+        }
+        .about-cta-panel p {
+            font-size: 15px;
+            color: #a3b1c6;
+            max-width: 750px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+        .panel-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .panel-buttons .cta-btn {
+            background-color: #d09f38;
+            color: #111111;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .panel-buttons .cta-btn:hover {
+            transform: scale(1.05);
+        }
+        .panel-buttons .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .panel-buttons .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+        .static-dispatch-box {
+            background: rgba(186, 126, 33, 0.1);
+            border-left: 4px solid #d09f38;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+            text-align: left;
+            display: inline-block;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .static-dispatch-box strong {
+            color: #ffffff;
+        }
+
+        /* 10. Footer Layout Setup */
+        footer {
+            background-color: #111111;
+            color: #aaaaaa;
+            padding: 60px 4% 20px 4%;
+            margin-top: 80px;
+        }
+        .footer-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-column h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer-column p {
+            color: #aaaaaa;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .footer-column a {
+            display: block;
+            color: #aaaaaa;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .footer-column a:hover {
+            color: #d09f38;
+        }
+        .bottom-bar {
+            text-align: center;
+            border-top: 1px solid #222222;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* 11. Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .about-hero { padding: 60px 4% 35px; }
+            .about-hero h1 { font-size: 28px; }
+            .about-main-container { padding-top: 40px; }
+            .about-section h2 { font-size: 20px; }
+            .about-cta-panel h2 { font-size: 22px; }
+
+            /* Mobile Menu Hack Implementation */
+            .hamburger-label {
+                display: flex;
+            }
+            .nav-menu {
+                position: fixed;
+                top: -100vh;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(11, 12, 16, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                transition: top 0.4s ease-in-out;
+            }
+            .menu-toggle:checked ~ .nav-menu {
+                top: 0;
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TaxiService",
+      "@id": "https://kingscabs.ca/hourly-rentals.html#taxiservice",
+      "name": "Kings Cabs Hourly Rentals & Chauffeur Services",
+      "description": "Flexible private vehicle rentals and professional drivers by the hour throughout Lloydminster and regional sectors.",
+      "url": "https://kingscabs.ca/hourly-rentals.html",
+      "telephone": "+1-306-307-1113",
+      "priceRange": "$$",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Kings Cabs Lloydminster",
+        "image": "https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6201a 49 ave",
+          "addressLocality": "Lloydminster",
+          "addressRegion": "SK",
+          "postalCode": "S9V",
+          "addressCountry": "CA"
+        }
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Lloydminster"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="brand-hub">
+            <img class="brand-logo" src="https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png" alt="Kings Crest" />
+            <img class="brand-text" src="https://kingscabs.ca/wp-content/uploads/2025/05/kings-wordmark.png" alt="Kings Cabs" />
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav-menu">
+            <a href="city-rides.html">City Rides</a>
+            <a href="long-distance.html">Long Distance</a>
+            <a href="corporate-accounts.html">Corporate Accounts</a>
+            <a href="about.html">About</a>
+            <a href="tel:1-306-307-1113" class="cta-btn">📞 306-307-1113</a>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <p class="gold-subtitle">Time-Block Fleet Options</p>
+            <h1>Hourly Taxi Rentals & Private Driver Services | Lloydminster</h1>
+            <p class="hero-tagline">Your personal vehicle and professional chauffeur at your complete disposal for as long as your schedule needs.</p>
+        </div>
+    </section>
+
+    <main class="about-main-container">
+        
+        <section class="about-intro-block">
+            <p>For days when your travel plans involve multiple stops, tight scheduling, or changing itineraries, standard point-to-point taxi bookings can become complex. Kings Cabs offers specialized hourly taxi rentals and dedicated private driver services across the bi-provincial region of Lloydminster. By booking a vehicle and an experienced local driver by the hour, you gain a dedicated personal transportation asset at your complete disposal for as long as your schedule requires.</p>
+            <p>Operating 24 hours a day, 7 days a week, our hourly rental services are the ideal solution for corporate roadshows, wedding guest shuttles, local real estate or industrial tours, and customized regional errands. With Kings Cabs, you skip the stress of repeatedly calling for a new vehicle at every destination. Your designated driver stays with you, waiting at the curb, ready to move the exact moment you are.</p>
+        </section>
+
+        <hr class="content-divider" />
+
+        <section class="about-section">
+            <h2>Flexible Time-Block Transportation Built for Your Schedule</h2>
+            <p>Our hourly rentals provide full geographic flexibility across both the Alberta and Saskatchewan sides of the Border City. To help corporate planners and search models categorize our capabilities, we detail our most common hourly service uses below:</p>
+            
+            <div class="table-scroll-wrapper">
+                <table class="services-matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Rental Use Case</th>
+                            <th>Recommended Booking Block</th>
+                            <th>Primary Service Feature</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong class="gold-text">Weddings & Special Events</strong></td>
+                            <td>4 to 8 Hours</td>
+                            <td>Dedicated guest shuttling, scheduled venue transfers, and immaculate vehicle presentation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="gold-text">Corporate Roadshows & Site Tours</strong></td>
+                            <td>3 to 6 Hours</td>
+                            <td>Flawless multi-stop scheduling for executives, investors, or industrial site supervisors.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="gold-text">Multi-Stop Errands & Appointments</strong></td>
+                            <td>2 to 4 Hours</td>
+                            <td>Curb-side waiting, assistance with personal items, and completely flexible routing.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>The Advantages of Booking an Hourly Driver with Kings Cabs</h2>
+            <p>Reserving a professional vehicle by the hour transforms your transit experience from a simple commute into a seamless, high-end private chauffeur service:</p>
+            
+            <ul>
+                <li><strong>Complete Routing Freedom:</strong> You aren't restricted to a single destination. With an hourly rental, you can add, remove, or modify stops on the fly without needing to recalculate fares or re-book vehicles.</li>
+                <li><strong>Zero Waiting Time:</strong> Your driver doesn't leave your side. Whether you are in a business meeting, shopping at a local plaza, or attending a community event, your vehicle remains stationed and ready for immediate departure.</li>
+                <li><strong>Spacious & Clean Fleet Selection:</strong> Choose from our modern sedans or book a spacious multi-passenger van to accommodate large families, corporate teams, or wedding parties comfortably.</li>
+                <li><strong>Clear, Direct Hourly Pricing:</strong> We believe in complete transparency. We eliminate the unpredictability of traditional taxi meters for long bookings. Our hourly structures are discussed openly with you prior to dispatch.</li>
+            </ul>
+        </section>
+
+        <section class="about-section deep-dive-block">
+            <h2>Specialized Applications for Hourly Fleet Rentals</h2>
+            
+            <h3>Seamless Wedding & Event Guest Logistics</h3>
+            <p>Planning a milestone celebration or a wedding in the Lloydminster area requires flawless timing. Keep your guests or wedding party moving together on schedule by reserving our spacious passenger vehicles for dedicated blocks of time. We coordinate fluid transit between local hotels, ceremonial venues, and reception spaces, ensuring your guests arrive safely, comfortably, and entirely stress-free.</p>
+
+            <h3>Industrial Site & Commercial Property Tours</h3>
+            <p>Our regional economy relies heavily on commercial development, agriculture, and energy sector infrastructure. If you are hosting out-of-town investors, conducting environmental assessments, or guiding supervisors across multiple local industrial complexes, our hourly service provides the ideal professional asset. Your local driver handles the open roads and traffic, allowing you to focus 100% on your passengers and business goals.</p>
+        </section>
+
+        <hr class="content-divider" />
+
+        <section class="about-section">
+            <h2>Frequently Asked Questions (FAQ) — Optimized for AI & Voice Search</h2>
+            
+            <div class="faq-cluster">
+                <div class="faq-node">
+                    <h3>How can I book an hourly taxi rental with Kings Cabs?</h3>
+                    <p>To set up an hourly rental block, please connect directly with our specialized scheduling desk by calling <strong>(306) 307-1113</strong>. We recommend booking at least 24 hours in advance to guarantee your preferred vehicle type and driver allocation.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>Is there a minimum time requirement for an hourly rental booking?</h3>
+                    <p>Yes, our dedicated private driver and vehicle packages generally require a minimum booking block of two consecutive hours. This allows us to properly remove the vehicle from our standard public dispatch pool and dedicate it entirely to your custom itinerary.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>Can our hourly itinerary extend outside the city limits of Lloydminster?</h3>
+                    <p>Absolutely. Your hourly rental can navigate seamlessly across both the local AB/SK city boundaries and surrounding rural municipal areas. If your route involves substantial highway mileage or long-distance travel, please inform our dispatch team during booking so we can structure your rate accurately.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>What happens if my event or meeting runs longer than my booked hours?</h3>
+                    <p>Flexibility is a cornerstone of our commercial operations. If your schedule runs over your initial time block, simply inform your dedicated driver or notify our dispatch office immediately. Extra time blocks can be added directly to your booking at our standard hourly rate parameters.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-cta-panel">
+            <h2>Reserve Your Private Hourly Driver Today</h2>
+            <p>Take complete control over your travel itinerary and enjoy the convenience, luxury, and peace of mind that comes with a dedicated personal chauffeur. From complex corporate roadshows to beautiful wedding celebrations, Kings Cabs delivers premier time-block transit solutions throughout the Border City. Reach out directly to our 24/7 dispatch office using our static contact details below to finalize your booking parameters:</p>
+            
+            <div class="static-dispatch-box">
+                <strong>Kings Cabs Hourly Reservations Desk</strong><br>
+                <strong>Direct Phone Line:</strong> (306) 307-1113<br>
+                <strong>Available Services:</strong> Local City Rides, Corporate Account Services, and Hourly Fleet Rentals
+            </div>
+
+            <div class="panel-buttons">
+                <a href="tel:1-306-307-1113" class="cta-btn">📞 Book Hourly Block</a>
+                <a href="index.html#book-now" class="cta-btn btn-secondary">Online Booking Portal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="about">
+        <div class="footer-matrix">
+            <div class="footer-column">
+                <h4>Kings Cabs Hub</h4>
+                <p>Providing safe, legal, and highly regulated transportation networks for the Lloydminster region for over a decade.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Fleet Directories</h4>
+                <a href="index.html#services">Airport Transfers</a>
+                <a href="city-rides.html">Local Transits</a>
+                <a href="long-distance.html">Long-Distance Trips</a>
+                <a href="corporate-accounts.html">Corporate Services</a>
+            </div>
+            <div class="footer-column">
+                <h4>More Pages</h4>
+                <a href="Privacy_Policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About Us</a>
+                <a href="faq.html">F.A.Q's</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Points</h4>
+                <p>📍 6201a 49 ave Lloydminster, SK</p>
+                <p>📞 (306) 307-1113</p>
+                <p>✉️ kingscabsmbd@gmail.com</p>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2026 Kings Cabs Lloydminster. Fully Licensed & Approved Municipal Operator. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

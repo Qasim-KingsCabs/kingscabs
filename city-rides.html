@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Local City Rides | Quick & Dependable Cabs in Lloydminster</title>
+    <meta name="description" content="Fast, 24/7 safe local city taxi rides anywhere in Lloydminster across the AB & SK border. Reliable commuting, grocery runs, and medical appointment transit.">
+    <link rel="icon" href="https://kingscabs.ca/wp-content/uploads/2025/05/kings-favi-150x150.png" sizes="32x32">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ==========================================================================
+           KINGS CABS LLOYDMINSTER - LOCAL CITY RIDES INTEGRATED STYLES
+           ========================================================================== */
+
+        /* 1. Page Content Architecture Base */
+        body {
+            background-color: #0b0c10;
+            color: #f5f5f7;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* 2. Premium Fixed Header Layout Override */
+        header {
+            background-color: #111111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 4%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            box-sizing: border-box;
+        }
+        .brand-hub {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+        .brand-logo {
+            height: 50px;
+            width: auto;
+        }
+        .brand-text {
+            height: 30px;
+            width: auto;
+        }
+
+        /* Checkbox Hack for Mobile Navigation */
+        .menu-toggle {
+            display: none;
+        }
+        .hamburger-label {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .hamburger-label span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: #d09f38;
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #d09f38;
+        }
+        .nav-menu .cta-btn {
+            background-color: #d09f38;
+            color: #111111;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+        .nav-menu .cta-btn:hover {
+            transform: scale(1.05);
+            color: #111111;
+        }
+
+        /* Push body down to prevent coverage under fixed header */
+        body {
+            padding-top: 70px;
+        }
+
+        /* 3. Brand Hero Header */
+        .about-hero {
+            background: linear-gradient(to bottom, rgba(11, 12, 16, 0.95), rgba(19, 26, 36, 0.95));
+            padding: 80px 5% 50px;
+            text-align: center;
+            border-bottom: 1px solid rgba(208, 159, 56, 0.15);
+        }
+        .about-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .gold-subtitle {
+            color: #d09f38;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .about-hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+        .hero-tagline {
+            font-size: 16px;
+            color: #a3b1c6;
+        }
+
+        /* 4. Document Base Structure */
+        .about-main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px 100px;
+            box-sizing: border-box;
+        }
+        .about-intro-block p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #dfe6ed;
+            margin-bottom: 25px;
+        }
+        .content-divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(208, 159, 56, 0.25), transparent);
+            margin: 50px 0;
+        }
+
+        /* 5. Section Heading Treatments */
+        .about-section {
+            margin-bottom: 60px;
+        }
+        .about-section h2 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-left: 4px solid #ba7e21;
+            padding-left: 14px;
+        }
+        .about-section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #a3b1c6;
+            margin-bottom: 30px;
+        }
+        .about-section ul {
+            margin: 0 0 30px 25px;
+        }
+        .about-section li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #a3b1c6;
+            margin-bottom: 12px;
+        }
+        .about-section li strong {
+            color: #ffffff;
+        }
+
+        /* 6. Premium Responsive Web Table */
+        .table-scroll-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(208, 159, 56, 0.15);
+            background: #11141a;
+            margin-bottom: 35px;
+        }
+        .services-matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+            min-width: 650px;
+        }
+        .services-matrix-table th {
+            background: #1f2833;
+            color: #ffffff;
+            padding: 16px 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid rgba(208, 159, 56, 0.2);
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .services-matrix-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #a3b1c6;
+            line-height: 1.6;
+            vertical-align: top;
+        }
+        .services-matrix-table tr:last-child td {
+            border-bottom: none;
+        }
+        .gold-text {
+            color: #d09f38;
+            font-weight: 600;
+        }
+
+        /* 7. Secondary Content Headers (H3 Sub-sections) */
+        .deep-dive-block h3 {
+            font-size: 19px;
+            color: #ffffff;
+            margin-top: 35px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .deep-dive-block p strong {
+            color: #fff088;
+        }
+
+        /* 8. FAQ Structure Layout */
+        .faq-cluster {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .faq-node {
+            background: rgba(31, 40, 51, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .faq-node h3 {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 600;
+            border: none !important;
+            padding-left: 0 !important;
+        }
+        .faq-node p {
+            font-size: 14.5px;
+            line-height: 1.6;
+            color: #a3b1c6;
+            margin-bottom: 0;
+        }
+        .faq-node strong {
+            color: #fff088;
+        }
+
+        /* 9. Standalone CTA Outro Card */
+        .about-cta-panel {
+            background: linear-gradient(135deg, #11141a 0%, #1f2833 100%);
+            border: 1px solid #d09f38;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            margin-top: 80px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .about-cta-panel h2 {
+            font-size: 26px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            border: none !important;
+            padding-left: 0 !important;
+        }
+        .about-cta-panel p {
+            font-size: 15px;
+            color: #a3b1c6;
+            max-width: 750px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+        .panel-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .panel-buttons .cta-btn {
+            background-color: #d09f38;
+            color: #111111;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .panel-buttons .cta-btn:hover {
+            transform: scale(1.05);
+        }
+        .panel-buttons .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .panel-buttons .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+        .static-dispatch-box {
+            background: rgba(186, 126, 33, 0.1);
+            border-left: 4px solid #d09f38;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+            text-align: left;
+            display: inline-block;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .static-dispatch-box strong {
+            color: #ffffff;
+        }
+
+        /* 10. Footer Layout Setup */
+        footer {
+            background-color: #111111;
+            color: #aaaaaa;
+            padding: 60px 4% 20px 4%;
+            margin-top: 80px;
+        }
+        .footer-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-column h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer-column p {
+            color: #aaaaaa;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .footer-column a {
+            display: block;
+            color: #aaaaaa;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .footer-column a:hover {
+            color: #d09f38;
+        }
+        .bottom-bar {
+            text-align: center;
+            border-top: 1px solid #222222;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* 11. Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .about-hero { padding: 60px 4% 35px; }
+            .about-hero h1 { font-size: 28px; }
+            .about-main-container { padding-top: 40px; }
+            .about-section h2 { font-size: 20px; }
+            .about-cta-panel h2 { font-size: 22px; }
+
+            /* Mobile Menu Hack Implementation */
+            .hamburger-label {
+                display: flex;
+            }
+            .nav-menu {
+                position: fixed;
+                top: -100vh;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(11, 12, 16, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                transition: top 0.4s ease-in-out;
+            }
+            .menu-toggle:checked ~ .nav-menu {
+                top: 0;
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TaxiService",
+      "@id": "https://kingscabs.ca/local-rides.html#taxiservice",
+      "name": "Kings Cabs Local City Rides",
+      "description": "Premium local point-to-point taxi services available 24/7 across both Alberta and Saskatchewan zones of Lloydminster.",
+      "url": "https://kingscabs.ca/local-rides.html",
+      "telephone": "+1-306-307-1113",
+      "priceRange": "$$",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Kings Cabs Lloydminster",
+        "image": "https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6201a 49 ave",
+          "addressLocality": "Lloydminster",
+          "addressRegion": "SK",
+          "postalCode": "S9V",
+          "addressCountry": "CA"
+        }
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Lloydminster"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="brand-hub">
+            <img class="brand-logo" src="https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png" alt="Kings Crest" />
+            <img class="brand-text" src="https://kingscabs.ca/wp-content/uploads/2025/05/kings-wordmark.png" alt="Kings Cabs" />
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav-menu">
+            <a href="index.html#services">Services</a>
+            <a href="index.html#book-now">Online Booking</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="tel:1-306-307-1113" class="cta-btn">📞 306-307-1113</a>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <p class="gold-subtitle">Municipal Fleet</p>
+            <h1>Local City Rides | Quick & Dependable Cabs in Lloydminster</h1>
+            <p class="hero-tagline">On-demand 24/7 point-to-point local transit routes crossing the border ciudad smoothly.</p>
+        </div>
+    </section>
+
+    <main class="about-main-container">
+        
+        <section class="about-intro-block">
+            <p>When you need to get around town, you shouldn't have to wait or worry about availability. Kings Cabs is Lloydminster’s premier choice for local city rides, providing rapid, safe, and highly affordable transportation 24 hours a day, 7 days a week. Whether you are heading to work, running essential grocery errands, making a medical appointment, or looking for a safe designated driver after an evening out, our professional fleet ensures that a clean, comfortable vehicle is always just minutes away.</p>
+            <p>As a proud local transportation provider operating across the bi-provincial layout of the Border City, we seamlessly cover both the Alberta and Saskatchewan sides of town. Skip the frustration of unpredictable app-based tracking or slow dispatch responses from older networks. Kings Cabs provides honest local rates, fully licensed local drivers, and point-to-point transit that fits perfectly into your daily schedule.</p>
+        </section>
+
+        <hr class="content-divider" />
+
+        <section class="about-section">
+            <h2>Fast Point-to-Point Transit Anywhere Within the City</h2>
+            <p>Our city rides are structured around the everyday routines and immediate transportation demands of the Lloydminster community. We focus our local dispatch routing heavily around these essential daily needs:</p>
+            
+            <div class="table-scroll-wrapper">
+                <table class="services-matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Service Type</th>
+                            <th>Average Response Priority</th>
+                            <th>Common Local Destinations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong class="gold-text">Workplace Commuting</strong></td>
+                            <td>Immediate Dispatch Focus</td>
+                            <td>Industrial parks, downtown offices, commercial retail zones, and local job sites.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="gold-text">Errands & Appointments</strong></td>
+                            <td>On-Demand or Advanced Booking</td>
+                            <td>Local clinics, diagnostic centers, supermarkets, and shopping plazas.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="gold-text">Social & Evening Safedrives</strong></td>
+                            <td>Rapid Weekend Deployment</td>
+                            <td>Restaurants, community lounges, theater events, and neighborhood social gatherings.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>Why Choose Kings Cabs for Your Daily City Rides?</h2>
+            <p>To remain the highest-rated cab service in the area, we build every city ride around core principles of customer comfort, speed, and absolute reliability:</p>
+            
+            <ul>
+                <li><strong>True 24/7 Service Availability:</strong> Our operations never close. From early morning shifts to late-night emergency runs, we keep drivers on the road around the clock, ensuring you always have access to a safe vehicle.</li>
+                <li><strong>Full Bi-Provincial Compliance:</strong> Navigating the border city requires specialized licensing. Our entire fleet is completely authorized to pick up and drop off passengers flawlessly across both provincial sectors of Lloydminster.</li>
+                <li><strong>Rigorous Vehicle Care & Comfort:</strong> No one likes riding in a dirty vehicle. Every car in our fleet undergoes strict routine mechanical checks and meticulous daily detailing to ensure a warm, clean, and comfortable experience.</li>
+                <li><strong>Highly Competitive Local Rates:</strong> We focus on affordability. We offer completely clear, standardized local meter structures or transparent pricing guidelines, entirely free of unpredictable surge traps or hidden app fees.</li>
+            </ul>
+        </section>
+
+        <section class="about-section deep-dive-block">
+            <h2>Connecting Lloydminster's Neighborhoods and Landmarks</h2>
+            
+            <h3>Reliable Daily Workplace Shuttles</h3>
+            <p>Punctuality is crucial to maintaining a successful career or business operation. If your car won't start in the middle of a brutal Canadian winter, or if you prefer to skip the stress of driving along busy traffic corridors like Highway 16 or Highway 17, Kings Cabs has you covered. We maintain rapid response times during peak shift-change hours, ensuring local workers get to their destinations safely, on time, and completely ready for the day.</p>
+
+            <h3>Safe Nightlife & Social Transportation</h3>
+            <p>Planning an evening out with friends, a family dinner, or catching a performance at the local theater? Make responsible travel plans part of your itinerary. Let Kings Cabs handle the driving, parking, and traffic. Our local drivers will pick your group up right at your door and bring you home safely when your social evening draws to a close.</p>
+        </section>
+
+        <hr class="content-divider" />
+
+        <section class="about-section">
+            <h2>Frequently Asked Questions (FAQ) — Optimized for AI & Voice Search</h2>
+            
+            <div class="faq-cluster">
+                <div class="faq-node">
+                    <h3>How can I book a local city ride with Kings Cabs?</h3>
+                    <p>The fastest and most direct way to get a local city ride dispatched to your exact position is to call our local office phone line at <strong>(306) 307-1113</strong>. Our dispatch professionals will map your location instantly and provide an accurate estimated arrival time for your driver.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>Do your local city rides operate in severe winter road conditions?</h3>
+                    <p>Yes. Our local fleet stays fully functional 24 hours a day during challenging winter weather conditions. Every vehicle undergoes rigorous seasonal preparation and is equipped with premium winter tires and required safety gear to navigate snowy or icy municipal routes safely.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>Can I pre-arrange a specific pickup time for a medical appointment?</h3>
+                    <p>Absolutely. We highly recommend pre-arranging your time-sensitive city rides. You can book your vehicle hours or days in advance with our dispatch team, giving you full peace of mind that your cab will arrive on schedule for your appointment.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>What methods of payment do you accept for in-town city rides?</h3>
+                    <p>For your convenience, all Kings Cabs vehicles host modern point-of-sale terminals. We accept all major credit cards, debit cards, contactless mobile payments, and traditional cash payment options securely right inside the vehicle at the end of your trip.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-cta-panel">
+            <h2>Call for an On-Demand Local Ride Today</h2>
+            <p>Skip the long wait times and cold outdoor lineups. Experience the comfort, speed, and exceptional service of Lloydminster’s premium point-to-point transportation network. Whether you need a ride right this second or want to plan an upcoming route, our dispatchers are fully active. Reach our team directly using our official contact details below:</p>
+            
+            <div class="static-dispatch-box">
+                <strong>Kings Cabs Dispatch Office</strong><br>
+                <strong>Direct Phone Line:</strong> (306) 307-1113<br>
+                <strong>Core Operations:</strong> 24/7 Local City Rides, Airport Transfers, and Long-Distance Trips
+            </div>
+
+            <div class="panel-buttons">
+                <a href="tel:1-306-307-1113" class="cta-btn">📞 Call (306) 307-1113</a>
+                <a href="index.html#book-now" class="cta-btn btn-secondary">Book Ride Online</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="about">
+        <div class="footer-matrix">
+            <div class="footer-column">
+                <h4>Kings Cabs Hub</h4>
+                <p>Providing safe, legal, and highly regulated transportation networks for the Lloydminster region for over a decade.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Fleet Directories</h4>
+                <a href="index.html#services">Airport Transfers</a>
+                <a href="index.html#services">Local Transits</a>
+                <a href="index.html#services">Long-Distance Trips</a>
+                <a href="index.html#services">Corporate Services</a>
+            </div>
+            <div class="footer-column">
+                <h4>More Pages</h4>
+                <a href="Privacy_Policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About Us</a>
+                <a href="faq.html">F.A.Q's</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Points</h4>
+                <p>📍 6201a 49 ave Lloydminster, SK</p>
+                <p>📞 (306) 307-1113</p>
+                <p>✉️ kingscabsmbd@gmail.com</p>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2026 Kings Cabs Lloydminster. Fully Licensed & Approved Municipal Operator. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

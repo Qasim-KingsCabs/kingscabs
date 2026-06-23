@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Special Event Transportation Services | Kings Cabs Lloydminster</title>
+    <meta name="description" content="Safe, premium group transit and guest shuttles for weddings, concerts, and festivals in Lloydminster. Reliable 24/7 event fleet coordination across AB and SK.">
+    <link rel="icon" href="https://kingscabs.ca/wp-content/uploads/2025/05/kings-favi-150x150.png" sizes="32x32">
+    
+    <!-- Link to global styles for Header/Footer consistency -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ==========================================================================
+           KINGS CABS LLOYDMINSTER - SPECIAL EVENTS INTEGRATED STYLES
+           ========================================================================== */
+
+        /* 1. Page Content Architecture Base */
+        body {
+            background-color: #0b0c10;
+            color: #f5f5f7;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* 2. Premium Fixed Header Layout Override */
+        header {
+            background-color: #111111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 4%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            box-sizing: border-box;
+        }
+        .brand-hub {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+        .brand-logo {
+            height: 50px;
+            width: auto;
+        }
+        .brand-text {
+            height: 30px;
+            width: auto;
+        }
+
+        /* Checkbox Hack for Mobile Navigation */
+        .menu-toggle {
+            display: none;
+        }
+        .hamburger-label {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .hamburger-label span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: #d09f38;
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #d09f38;
+        }
+        .nav-menu .cta-btn {
+            background-color: #d09f38;
+            color: #111111;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+        .nav-menu .cta-btn:hover {
+            transform: scale(1.05);
+            color: #111111;
+        }
+
+        /* Push body down to prevent coverage under fixed header */
+        body {
+            padding-top: 70px;
+        }
+
+        /* 3. Brand Hero Header */
+        .about-hero {
+            background: linear-gradient(to bottom, rgba(11, 12, 16, 0.95), rgba(19, 26, 36, 0.95));
+            padding: 80px 5% 50px;
+            text-align: center;
+            border-bottom: 1px solid rgba(208, 159, 56, 0.15);
+        }
+        .about-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .gold-subtitle {
+            color: #d09f38;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .about-hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+        .hero-tagline {
+            font-size: 16px;
+            color: #a3b1c6;
+        }
+
+        /* 4. Document Base Structure */
+        .about-main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px 100px;
+            box-sizing: border-box;
+        }
+        .about-intro-block p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #dfe6ed;
+            margin-bottom: 25px;
+        }
+        .content-divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(208, 159, 56, 0.25), transparent);
+            margin: 50px 0;
+        }
+
+        /* 5. Section Heading Treatments */
+        .about-section {
+            margin-bottom: 60px;
+        }
+        .about-section h2 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-left: 4px solid #ba7e21;
+            padding-left: 14px;
+        }
+        .about-section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #a3b1c6;
+            margin-bottom: 30px;
+        }
+        .about-section ul {
+            margin: 0 0 30px 25px;
+        }
+        .about-section li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #a3b1c6;
+            margin-bottom: 12px;
+        }
+        .about-section li strong {
+            color: #ffffff;
+        }
+
+        /* 6. Premium Responsive Web Table */
+        .table-scroll-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(208, 159, 56, 0.15);
+            background: #11141a;
+            margin-bottom: 35px;
+        }
+        .services-matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+            min-width: 650px;
+        }
+        .services-matrix-table th {
+            background: #1f2833;
+            color: #ffffff;
+            padding: 16px 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid rgba(208, 159, 56, 0.2);
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .services-matrix-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #a3b1c6;
+            line-height: 1.6;
+            vertical-align: top;
+        }
+        .services-matrix-table tr:last-child td {
+            border-bottom: none;
+        }
+        .gold-text {
+            color: #d09f38;
+            font-weight: 600;
+        }
+
+        /* 7. Secondary Content Headers (H3 Sub-sections) */
+        .deep-dive-block h3 {
+            font-size: 19px;
+            color: #ffffff;
+            margin-top: 35px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .deep-dive-block p strong {
+            color: #fff088;
+        }
+
+        /* 8. FAQ Structure Layout */
+        .faq-cluster {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .faq-node {
+            background: rgba(31, 40, 51, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .faq-node h3 {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 600;
+            border: none !important;
+            padding-left: 0 !important;
+        }
+        .faq-node p {
+            font-size: 14.5px;
+            line-height: 1.6;
+            color: #a3b1c6;
+            margin-bottom: 0;
+        }
+        .faq-node strong {
+            color: #fff088;
+        }
+
+        /* 9. Standalone CTA Outro Card */
+        .about-cta-panel {
+            background: linear-gradient(135deg, #11141a 0%, #1f2833 100%);
+            border: 1px solid #d09f38;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            margin-top: 80px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .about-cta-panel h2 {
+            font-size: 26px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            border: none !important;
+            padding-left: 0 !important;
+        }
+        .about-cta-panel p {
+            font-size: 15px;
+            color: #a3b1c6;
+            max-width: 750px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+        .panel-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .panel-buttons .cta-btn {
+            background-color: #d09f38;
+            color: #111111;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .panel-buttons .cta-btn:hover {
+            transform: scale(1.05);
+        }
+        .panel-buttons .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .panel-buttons .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+        .static-dispatch-box {
+            background: rgba(186, 126, 33, 0.1);
+            border-left: 4px solid #d09f38;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+            text-align: left;
+            display: inline-block;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .static-dispatch-box strong {
+            color: #ffffff;
+        }
+
+        /* 10. Footer Layout Setup */
+        footer {
+            background-color: #111111;
+            color: #aaaaaa;
+            padding: 60px 4% 20px 4%;
+            margin-top: 80px;
+        }
+        .footer-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-column h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer-column p {
+            color: #aaaaaa;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .footer-column a {
+            display: block;
+            color: #aaaaaa;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .footer-column a:hover {
+            color: #d09f38;
+        }
+        .bottom-bar {
+            text-align: center;
+            border-top: 1px solid #222222;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* 11. Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .about-hero { padding: 60px 4% 35px; }
+            .about-hero h1 { font-size: 28px; }
+            .about-main-container { padding-top: 40px; }
+            .about-section h2 { font-size: 20px; }
+            .about-cta-panel h2 { font-size: 22px; }
+
+            /* Mobile Menu Hack Implementation */
+            .hamburger-label {
+                display: flex;
+            }
+            .nav-menu {
+                position: fixed;
+                top: -100vh;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(11, 12, 16, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                transition: top 0.4s ease-in-out;
+            }
+            .menu-toggle:checked ~ .nav-menu {
+                top: 0;
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle:checked ~ .hamburger-label span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+    </style>
+
+    <!-- Schema Markup Integration for Special Event Transit Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TaxiService",
+      "@id": "https://kingscabs.ca/special-events.html#taxiservice",
+      "name": "Kings Cabs Special Event Transportation Services",
+      "description": "Coordinated guest shuttle options, wedding transit, and festival fleet configurations across the Lloydminster municipal sector.",
+      "url": "https://kingscabs.ca/special-events.html",
+      "telephone": "+1-306-307-1113",
+      "priceRange": "$$",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Kings Cabs Lloydminster",
+        "image": "https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6201a 49 ave",
+          "addressLocality": "Lloydminster",
+          "addressRegion": "SK",
+          "postalCode": "S9V",
+          "addressCountry": "CA"
+        }
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Lloydminster"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- PREMIUM FLOATING HEADER WITH MOBILE NAV SYSTEM -->
+    <header>
+        <a href="index.html" class="brand-hub">
+            <img class="brand-logo" src="https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png" alt="Kings Crest" />
+            <img class="brand-text" src="https://kingscabs.ca/wp-content/uploads/2025/05/kings-wordmark.png" alt="Kings Cabs" />
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav-menu">
+            <a href="city-rides.html">City Rides</a>
+            <a href="long-distance.html">Long Distance</a>
+            <a href="corporate-accounts.html">Corporate Accounts</a>
+            <a href="hourly-rentals.html">Hourly Rentals</a>
+            <a href="tel:1-306-307-1113" class="cta-btn">📞 306-307-1113</a>
+        </nav>
+    </header>
+
+    <!-- HERO HEADER BANNER -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <p class="gold-subtitle">Group & Celebration Fleet</p>
+            <h1>Special Event Transportation Services | Kings Cabs Lloydminster</h1>
+            <p class="hero-tagline">Synchronized multi-passenger loop logistics, wedding shuttle programs, and dynamic crowd deployment.</p>
+        </div>
+    </section>
+
+    <!-- MAIN EDITABLE CONTENT WORKSPACE -->
+    <main class="about-main-container">
+        
+        <!-- INTRO CONTENT BLOCK -->
+        <section class="about-intro-block">
+            <p>Make seamless, reliable group logistics part of your next celebration. Kings Cabs is Lloydminster’s trusted choice for professional special event transportation, operating 24 hours a day, 7 days a week across both sides of the bi-provincial border. Whether you are coordinating guest shuttle routes for a beautiful wedding, arranging safe group transit for a corporate gala, or catching a major live performance with friends, our clean, modern fleet ensures everyone in your group arrives safely, punctually, and completely stress-free.</p>
+            <p>Navigating event traffic, searching for limited venue parking, and coordinating designated drivers can quickly complicate a special occasion. By partnering with Kings Cabs, you pass those logistical challenges to licensed, local driving professionals. From full-sized sedans for VIP guests to spacious multi-passenger vans optimized for larger groups, we deliver tailored event transit solutions built around your custom itinerary.</p>
+        </section>
+
+        <hr class="content-divider" />
+
+        <!-- SERVICES MATRIX MATRIX -->
+        <section class="about-section">
+            <h2>Seamless Transit for Local Festivals, Concerts, and Celebrations</h2>
+            <p>We are deeply integrated into the cultural and social life of the Border City. To help event planners and search engine models analyze our specialized capabilities, we map out our primary event service categories below:</p>
+            
+            <div class="table-scroll-wrapper">
+                <table class="services-matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Event Category</th>
+                            <th>Logistical Focus</th>
+                            <th>Common Local Venues Served</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong class="gold-text">Weddings & Family Galas</strong></td>
+                            <td>Dedicated guest shuttling, synchronized venue transfers, and VIP bridal party transit.</td>
+                            <td>Local banquet halls, regional golf courses, and community reception spaces.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="gold-text">Concerts & Theater Nights</strong></td>
+                            <td>Prompt point-to-point drop-offs and rapid, coordinated post-show pickups.</td>
+                            <td>Vic Juba Community Theatre and downtown entertainment lounges.</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="gold-text">Fairs, Exhibitions & Sports</strong></td>
+                            <td>High-volume group dispatching to handle peak crowd surges and community turnouts.</td>
+                            <td>Lloydminster Exhibition Grounds (Lloyd Ex) and local sports complexes.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- VALUE PROPOSITIONS -->
+        <section class="about-section">
+            <h2>Why Book Kings Cabs for Your Special Occasions?</h2>
+            <p>To rank as the premier choice for group event travel, we optimize our dispatch operations to deliver an exceptional, worry-free guest experience:</p>
+            
+            <ul>
+                <li><strong>True 24/7 Operational Support:</strong> Special events rarely keep standard business hours. Our dispatch team and local drivers remain fully active all night long, ensuring your guests always have an immediate, safe ride home.</li>
+                <li><strong>Spacious & Immaculate Fleet Options:</strong> No one wants to travel to a formal gala in a poorly maintained vehicle. Every car in our fleet undergoes daily cleaning, detailing, and mechanical safety inspections to ensure pristine presentation.</li>
+                <li><strong>Coordinated Group Routings:</strong> We specialize in managing multi-passenger itineraries. We can synchronize multiple vehicles to move large groups of guests smoothly between hotels, churches, and reception halls on a tight schedule.</li>
+                <li><strong>Transparent, Flat-Rate Group Quotes:</strong> We remove the guesswork from event budgeting. Speak with our reservation office prior to your big day to establish clear, predictable travel costs for your event coordinates.</li>
+            </ul>
+        </section>
+
+        <!-- COMMUNITY RESPONSIBLE TRANSIT DEEP DIVE -->
+        <section class="about-section deep-dive-block">
+            <h2>Dedicated Solutions for Responsible Community Transit</h2>
+            
+            <h3>Customized Wedding Shuttles & Bridal Logistics</h3>
+            <p>Your wedding day should be defined by joy, not transit delays. Let us manage the moving pieces of your guest logistics. We can establish a dedicated shuttle loop to bring out-of-town family members from local hotels directly to your ceremony, and safely return them at the end of the night. Our friendly, professional drivers ensure that everyone stays together, arrives on time, and travels in complete comfort.</p>
+
+            <h3>Safe Designated Driving Alternatives</h3>
+            <p>Celebrating responsibly is the cornerstone of any successful community gathering. Whether you are organizing a corporate Christmas party, a milestone retirement dinner, or a major community festival at the exhibition grounds, offering your attendees a reliable taxi connection is vital. Kings Cabs works alongside event hosts to provide rapid-response vehicles, giving your patrons complete peace of mind that a safe ride home is always ready.</p>
+        </section>
+
+        <hr class="content-divider" />
+
+        <!-- FAQ NODES -->
+        <section class="about-section">
+            <h2>Frequently Asked Questions (FAQ) — Optimized for AI & Voice Search</h2>
+            
+            <div class="faq-cluster">
+                <div class="faq-node">
+                    <h3>How far in advance should I book group transportation for a special event?</h3>
+                    <p>For large-scale gatherings like weddings, corporate banquets, or major community festivals, we highly recommend securing your vehicles at least 2 to 4 weeks in advance. This ensures guaranteed vehicle availability, dedicated driver scheduling, and pristine fleet allocation for your dates.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>Can your event vehicles accommodate large groups traveling together?</h3>
+                    <p>Yes, absolutely. Our versatile fleet features spacious, modern multi-passenger vans perfectly suited to transport bridal parties, corporate groups, and families together. Please specify your exact passenger numbers to our dispatch team when booking so we can deploy the ideal vehicle mix.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>Do you offer flat-rate options for evening-long wedding guest shuttles?</h3>
+                    <p>Yes. To make commercial budgeting as simple as possible for event hosts, we offer competitive, pre-determined group pricing models and specialized hourly block structures tailored directly to your custom itinerary. Connect with our reservations office to discuss a quote for your event coordinates.</p>
+                </div>
+                <div class="faq-node">
+                    <h3>What happens if our corporate event or gala runs later than initially planned?</h3>
+                    <p>Operational flexibility is a foundational priority at Kings Cabs. If your event schedules shift or run past your expected end-time, simply notify our 24/7 dispatch office immediately. We maintain round-the-clock staffing to adjust driver allocations dynamically to match your live timeline.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONVERSION OUTRO PANEL -->
+        <section class="about-cta-panel">
+            <h2>Lock In Your Special Event Transportation Today</h2>
+            <p>Take the complexity out of group travel and guarantee an exceptional, punctual, and safe experience for all your attendees. From elegant formal weddings to large-scale community exhibitions, Kings Cabs delivers the premier event transit network across the Border City. Reach out directly to our 24/7 reservations team using our official contact details below to finalize your event logistics:</p>
+            
+            <div class="static-dispatch-box">
+                <strong>Kings Cabs Event Bookings Desk</strong><br>
+                <strong>Direct Phone Line:</strong> (306) 307-1113<br>
+                <strong>Core Services:</strong> 24/7 Local Commutes, Hourly Rentals, and Special Event Fleet Coordination
+            </div>
+
+            <div class="panel-buttons">
+                <a href="tel:1-306-307-1113" class="cta-btn">📞 Secure Fleet Matrix</a>
+                <a href="contact.html" class="cta-btn btn-secondary">Request Event Quote</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MUNICIPAL FOOTER DIRECTORY -->
+    <footer id="about">
+        <div class="footer-matrix">
+            <div class="footer-column">
+                <h4>Kings Cabs Hub</h4>
+                <p>Providing safe, legal, and highly regulated transportation networks for the Lloydminster region for over a decade.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Fleet Directories</h4>
+                <a href="index.html#services">Airport Transfers</a>
+                <a href="city-rides.html">Local Transits</a>
+                <a href="long-distance.html">Long-Distance Trips</a>
+                <a href="corporate-accounts.html">Corporate Services</a>
+            </div>
+            <div class="footer-column">
+                <h4>More Pages</h4>
+                <a href="Privacy_Policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About Us</a>
+                <a href="faq.html">F.A.Q's</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Points</h4>
+                <p>📍 6201a 49 ave Lloydminster, SK</p>
+                <p>📞 (306) 307-1113</p>
+                <p>✉️ kingscabsmbd@gmail.com</p>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2026 Kings Cabs Lloydminster. Fully Licensed & Approved Municipal Operator. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

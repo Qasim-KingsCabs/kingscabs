@@ -344,3 +344,230 @@
             .mobile-action-bar { display: grid; }
             body { padding-bottom: 70px; }
         }
+
+/* ==========================================================================
+   KINGS CABS INDEX.HTML - ABOUT US SECTION CODES
+   ========================================================================== */
+
+.kings-about-section {
+    background-color: #0b0c10;
+    padding: 90px 4%;
+    color: #f5f5f7;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kings-about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Base Layout Structure (Fallback grid framework compatible with WeasyPrint/Web) */
+.kings-about-grid {
+    display: block;
+}
+
+/* Real-Web layout processing via standard inline-blocks/flex modern support */
+@media (min-width: 992px) {
+    .kings-about-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 60px;
+        align-items: center;
+    }
+}
+
+/* Content Element Definitions */
+.gold-badge {
+    color: #d09f38;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.kings-about-content h2 {
+    font-size: 32px;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.kings-about-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #a3b1c6;
+    margin-bottom: 20px;
+}
+
+/* Core Competencies Styling */
+.competencies-box {
+    margin: 35px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.competency-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.comp-icon {
+    font-size: 24px;
+    background: rgba(208, 159, 56, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    line-height: 1;
+}
+
+.comp-text h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.comp-text p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #8a99ad;
+}
+
+/* Action Trigger Links */
+.about-action-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.about-readmore-btn {
+    background-color: #d09f38;
+    color: #111111;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 15px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.about-readmore-btn:hover {
+    transform: translateY(-2px);
+    background-color: #ba7e21;
+}
+
+.about-call-btn {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: background-color 0.2s;
+}
+
+.about-call-btn:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Right Side: Stats Panel Styling */
+.kings-about-stats-panel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 40px;
+}
+
+@media (min-width: 992px) {
+    .kings-about-stats-panel {
+        margin-top: 0;
+    }
+}
+
+.stats-card {
+    background: #11141a;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 25px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #d09f38;
+    margin-bottom: 5px;
+}
+
+.stat-number sub {
+    font-size: 14px;
+    bottom: 0;
+    color: #a3b1c6;
+}
+
+.stat-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #a3b1c6;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+.stats-card-highlight {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #1f2833 0%, #11141a 100%);
+    border: 1px solid rgba(208, 159, 56, 0.25);
+    padding: 30px 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stats-card-highlight h4 {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.stats-card-highlight p {
+    font-size: 13.5px;
+    color: #a3b1c6;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+.stats-cta {
+    display: inline-block;
+    color: #d09f38;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #d09f38;
+    padding-bottom: 4px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.stats-cta:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* Responsiveness Tweaks */
+@media (max-width: 576px) {
+    .kings-about-content h2 { font-size: 26px; }
+    .kings-about-stats-panel { grid-template-columns: 1fr; }
+    .stats-card-highlight { grid-column: span 1; }
+    .about-action-row { flex-direction: column; }
+    .about-action-row a { text-align: center; }
+}

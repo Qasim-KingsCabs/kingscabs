@@ -19,100 +19,117 @@
         gtag("config", "GT-5D4TP6GL");
     </script>
     <link rel="stylesheet" href="styles.css" />
-<script type="application/ld+json">
-    {
+    <script type="application/ld+json">
     [
-  {
-    "@context": "https://schema.org",
-    "@type": "TaxiService",
-    "@id": "https://kingscabs.ca/#taxiservice",
-    "name": "Kings Cabs Lloydminster",
-    "description": "Premium, fast, and completely licensed 24/7 taxi dispatch infrastructure connecting people across the AB & SK borders of Lloydminster.",
-    "url": "https://kingscabs.ca/index.html",
-    "telephone": "+1-306-307-1113",
-    "priceRange": "$$",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Kings Cabs",
-      "image": "images/lionhead.webp",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "6201a 49 ave",
-        "addressLocality": "Lloydminster",
-        "addressRegion": "SK",
-        "postalCode": "S9V",
-        "addressCountry": "CA"
-      }
-    },
-    "areaServed": [
       {
-        "@type": "AdministrativeArea",
-        "name": "Lloydminster (Alberta Side)"
+        "@context": "https://schema.org",
+        "@type": "TaxiService",
+        "@id": "https://kingscabs.ca/#taxiservice",
+        "name": "Kings Cabs Lloydminster",
+        "description": "Premium, fast, and completely licensed 24/7 taxi dispatch infrastructure connecting people across the AB & SK borders of Lloydminster.",
+        "url": "https://kingscabs.ca/index.html",
+        "telephone": "+1-306-307-1113",
+        "priceRange": "$$",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Kings Cabs",
+          "image": "images/lionhead.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "6201a 49 ave",
+            "addressLocality": "Lloydminster",
+            "addressRegion": "SK",
+            "postalCode": "S9V",
+            "addressCountry": "CA"
+          }
+        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Lloydminster (Alberta Side)"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Lloydminster (Saskatchewan Side)"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Transportation Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Local Border Transits",
+                "description": "Prompt point-to-point pickups structured to navigate both the Alberta and Saskatchewan sides of Lloydminster flawlessly."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Airport Transfers",
+                "description": "Punctual, stress-free airport drop-offs and trackable arrival pickups using scheduled timeline routes."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Senior Voucher Program",
+                "description": "Fully approved provider accepting City of Lloydminster Senior Taxi Voucher subsidies to ensure accessible transit."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Corporate Accounts",
+                "description": "Streamlined fleet billing options customized for local regional enterprises, business events, and corporate client commutes."
+              }
+            }
+          ]
+        }
       },
       {
-        "@type": "AdministrativeArea",
-        "name": "Lloydminster (Saskatchewan Side)"
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Kings Cabs",
+        "url": "https://kingscabs.ca/"
       }
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Transportation Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Local Border Transits",
-            "description": "Prompt point-to-point pickups structured to navigate both the Alberta and Saskatchewan sides of Lloydminster flawlessly."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Airport Transfers",
-            "description": "Punctual, stress-free airport drop-offs and trackable arrival pickups using scheduled timeline routes."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Senior Voucher Program",
-            "description": "Fully approved provider accepting City of Lloydminster Senior Taxi Voucher subsidies to ensure accessible transit."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Corporate Accounts",
-            "description": "Streamlined fleet billing options customized for local regional enterprises, business events, and corporate client commutes."
-          }
-        }
-      ]
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Kings Cabs",
-    "url": "https://kingscabs.ca/"
-  }
-]
-}
-</script>
+    ]
+    </script>
 </head>
 <body>
     
-    <header>
+    <header class="main-header">
         <a href="index.html" class="brand-hub">
             <img class="brand-logo" src="images/lionhead.webp" alt="Kings Crest" />
             <img class="brand-text" src="images/kings-wordmark.webp" alt="Kings Cabs" />
         </a>
+
+        <!-- Hamburger Icon Menu Wrapper for Mobile Viewports -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+        <label for="menu-toggle" class="hamburger-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <nav class="nav-menu">
-            <a href="#services">Services</a>
-            <a href="#book-now">Online Booking</a>
+            <!-- Services Link Rendered with Complete Dropdown Menu Support -->
+            <div class="nav-dropdown-wrapper">
+                <a href="#services" class="dropdown-trigger">Services <span class="arrow-indicator">▾</span></a>
+                <div class="dropdown-content-panel">
+                    <a href="local-transits.html">Local Border Transits</a>
+                    <a href="airport-transfers.html">Airport Transfers</a>
+                    <a href="long-distance.html">Long Distance Trips</a>
+                    <a href="senior-voucher.html">Senior Voucher Program</a>
+                    <a href="corporate-accounts.html">Corporate Accounts</a>
+                </div>
+            </div>
+            <a href="online-booking.html">Online Booking</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="tel:1-306-307-1113" class="cta-btn">📞 306-307-1113</a>
@@ -126,11 +143,12 @@
             <p>Connecting people across the AB & SK borders with premium, fast, and completely licensed 24/7 taxi dispatch infrastructure.</p>
             <div class="action-cluster">
                 <a href="tel:1-306-307-1113" class="cta-btn">Call Now</a>
-                <a href="#book-now" class="cta-btn btn-secondary">Book Online</a>
+                <a href="online-booking.html" class="cta-btn btn-secondary">Book Online</a>
             </div>
         </div>
     </section>
 
+    <!-- Services Section Presenting Complete Linking Matrix to Specialized Landing Directories -->
     <section id="services" class="content-block">
         <div class="section-header">
             <p>Our Specializations</p>
@@ -141,46 +159,34 @@
                 <span class="card-icon">🚗</span>
                 <h3>Local Border Transits</h3>
                 <p>Prompt point-to-point pickups structured to navigate both the Alberta and Saskatchewan sides of Lloydminster flawlessly.</p>
+                <a href="local-transits.html" class="service-panel-link">Explore Service Details →</a>
             </div>
             <div class="service-card">
                 <span class="card-icon">✈️</span>
                 <h3>Airport Transfers</h3>
                 <p>Punctual, stress-free airport drop-offs and trackable arrival pickups using scheduled timeline routes.</p>
+                <a href="airport-transfers.html" class="service-panel-link">Explore Service Details →</a>
+            </div>
+            <div class="service-card">
+                <span class="card-icon">🛣️</span>
+                <h3>Long Distance Trips</h3>
+                <p>Safe and predictable highway transit stretching along regional corridors to medical clinics, transport hubs, and out of town landmarks.</p>
+                <a href="long-distance.html" class="service-panel-link">Explore Service Details →</a>
             </div>
             <div class="service-card">
                 <span class="card-icon">🎓</span>
                 <h3>Senior Voucher Program</h3>
                 <p>We are a fully approved provider accepting City of Lloydminster Senior Taxi Voucher subsidies to ensure accessible transit.</p>
+                <a href="senior-voucher.html" class="service-panel-link">Explore Service Details →</a>
             </div>
             <div class="service-card">
                 <span class="card-icon">💼</span>
                 <h3>Corporate Accounts</h3>
                 <p>Streamlined fleet billing options customized for local regional enterprises, business events, and corporate client commutes.</p>
+                <a href="corporate-accounts.html" class="service-panel-link">Explore Service Details →</a>
             </div>
         </div>
     </section>
-
-  <!--  <section id="book-now" class="content-block" style="background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.03);">
-        <div class="section-header">
-            <p>Secure Cloud Booking</p>
-            <h2>Request Your Ride</h2>
-        </div>
-        <div class="dispatch-wrapper">
-            <div id="taxicaller-booking-form" style="width: 100%;"></div>
-            <script src="https://passenger.taxicaller.net/embed/embed-v1.0.0.js"></script>
-            <script>
-              new TaxiCaller.PassengerApp({
-                element: '#taxicaller-booking-form',
-                app: 'taxicaller',
-                company: 48430,
-                heightDesktop: '550px',
-                heightMobile: '350px',
-                mobileBreakpoint: '768px',
-                returnMessage: 'ᐊ Clear and Start Over',
-              })
-            </script>
-        </div>
-    </section> --!>
 
     <section class="content-block">
         <div class="section-header">
@@ -190,97 +196,77 @@
         <div class="review-cluster">
             <div class="review-node">
                 <div class="rating-stars">★★★★★</div>
-                <p>"Kings Cabs offers the best service in Lloydminster! The drivers are always punctual and friendly. Highly recommend!"</p>
+                <p>"Kings Cabs offers exceptional transportation in Lloydminster. Our drivers are consistently punctual, courteous, and highly professional."</p>
             </div>
             <div class="review-node">
                 <div class="rating-stars">★★★★★</div>
-                <p>"I always choose Kings Cabs for my airport transfers. The cars are clean, and the service is impeccable!"</p>
+                <p>"I regularly reserve with Kings Cabs for my regional airport transfers. The vehicles are pristine and the dispatch process is smooth."</p>
             </div>
         </div>
     </section>
 
-    
     <!-- START: Why Kings Cabs Section -->
     <section class="why-kings-section" id="why-us">
         <div class="why-kings-container">
 
-            <!-- Section Header -->
             <div class="why-kings-header">
                 <span class="gold-subtitle">The Border City's Trusted Choice</span>
                 <h2>Why Choose Kings Cabs?</h2>
-                <p>From daily local commutes to specialized long-distance travel, we set the benchmark for professional
-                    transit across Lloydminster and beyond.</p>
+                <p>From daily local commutes to specialized long distance travel, we set a clear benchmark for professional transit across Lloydminster and beyond.</p>
             </div>
 
-            <!-- Features Grid -->
             <div class="why-kings-grid">
 
-                <!-- Feature 1: 24/7 Dispatch -->
                 <div class="why-card">
                     <div class="why-icon-wrapper">
                         <span class="why-icon">⏰</span>
                     </div>
                     <h3>24/7 Absolute Reliability</h3>
-                    <p>We never close. Whether it's a 3:00 AM emergency, an early morning flight connection, or a
-                        late-night ride home, our live dispatchers and drivers are active.</p>
+                    <p>We never close. Whether it is an early morning transit link or a late night ride home, our live dispatchers and active vehicles operate continuously.</p>
                 </div>
 
-                <!-- Feature 2: Edmonton Corridor & Long Distance -->
                 <div class="why-card">
                     <div class="why-icon-wrapper">
                         <span class="why-icon">🛣️</span>
                     </div>
                     <h3>Edmonton Highway Specialists</h3>
-                    <p>Need a dependable ride down the Yellowhead? We specialize in stress-free, long-distance transfers
-                        from Lloydminster to Edmonton, including direct drop-offs at YEG Airport and clinical
-                        appointments.</p>
+                    <p>Need a dependable ride down the Yellowhead corridor? We handle stress free long distance transfers from Lloydminster to Edmonton, including direct drop offs at YEG Airport and clinical centers.</p>
                 </div>
 
-                <!-- Feature 3: Senior & Voucher Approved -->
                 <div class="why-card">
                     <div class="why-icon-wrapper">
                         <span class="why-icon">💳</span>
                     </div>
                     <h3>Senior Program Voucher Approved</h3>
-                    <p>We are a fully authorized transit provider for Lloydminster’s subsidized Senior Voucher programs.
-                        We treat our senior community with the utmost patience, care, and assistive support.</p>
+                    <p>We are an authorized transportation provider for Lloydminster subsidized Senior Voucher programs, treating our local seniors with maximum patience and physical support.</p>
                 </div>
 
-                <!-- Feature 4: Winter & Severe Weather Ready -->
                 <div class="why-card">
                     <div class="why-icon-wrapper">
                         <span class="why-icon">❄️</span>
                     </div>
-                    <h3>Winter-Tested & Safe Fleet</h3>
-                    <p>Western Canadian winters can be brutal. Our modern vehicles undergo rigorous preventative
-                        maintenance and are fully winterized to ensure maximum traction and safety on icy roads.</p>
+                    <h3>Winter Tested & Safe Fleet</h3>
+                    <p>Western Canadian winters require constant safety checks. Our modern vehicles undergo rigorous preventative maintenance and are fully winterized for frozen roads.</p>
                 </div>
 
-                <!-- Feature 5: Bi-Provincial Compliance -->
                 <div class="why-card">
                     <div class="why-icon-wrapper">
                         <span class="why-icon">🗺️</span>
                     </div>
-                    <h3>Dual-Province Compliance</h3>
-                    <p>Operating across the Alberta and Saskatchewan state line requires precise licensing. Kings Cabs
-                        is fully insured, commercially licensed, and permitted to operate seamlessly across both sides
-                        of the city.</p>
+                    <h3>Dual Province Compliance</h3>
+                    <p>Operating across the Alberta and Saskatchewan boundary requires distinct expertise. Kings Cabs is fully commercially licensed and permitted to serve both sides of the city.</p>
                 </div>
 
-                <!-- Feature 6: Transparent Flat Pricing -->
                 <div class="why-card">
                     <div class="why-icon-wrapper">
                         <span class="why-icon">💰</span>
                     </div>
-                    <h3>No Hidden Surges</h3>
-                    <p>Unlike dynamic rideshare apps that spike their prices during peak hours or storms, we provide
-                        consistent, transparent pricing. Know your costs upfront before you even step into the vehicle.
-                    </p>
+                    <h3>Transparent Pricing Model</h3>
+                    <p>Unlike dynamic rideshare networks that spike fares during rush hour or weather storms, we provide consistent upfront clarity before you enter the car.</p>
                 </div>
 
             </div>
 
-            <!-- Bottom Call to Action Mini-Banner -->
             <div class="why-cta-banner">
                 <p>Ready to experience premium local transit? <strong>Book your ride in under 60 seconds.</strong></p>
                 <div class="why-cta-buttons">
@@ -293,71 +279,67 @@
     </section>
     <!-- END: Why Kings Cabs Section -->
 
-        <!-- START: Premium About Us Section -->
-<section class="kings-about-section" id="about-us">
-    <div class="kings-about-container">
-        
-        <div class="kings-about-grid">
-            <!-- Left Side: Content Block -->
-            <div class="kings-about-content">
-                <span class="gold-badge">Who We Are</span>
-                <h2>Lloydminster’s Premier 24/7 Professional Taxi & Transit Network</h2>
-                
-                <p>For over a decade, Kings Cabs has stood as the gold standard for safe, legal, and highly regulated transportation across the unique bi-provincial layout of the Border City. Operating round-the-clock, 365 days a year, we seamlessly bridge the Alberta and Saskatchewan statelines, ensuring that local residents, corporate teams, and visitors navigate Lloydminster without logistical delays.</p>
-                
-                <p>We pride ourselves on more than just getting you from point A to point B. Whether managing immediate local city rides, coordinating essential municipal senior program vouchers, or facilitating smooth long-distance airport transfers along the Yellowhead Corridor to Edmonton, our mission remains centered on professional integrity, pristine fleet standards, and absolute punctuality.</p>
-                
-                <!-- Core Competencies Micro-Grid -->
-                <div class="competencies-box">
-                    <div class="competency-item">
-                        <div class="comp-icon">🛡️</div>
-                        <div class="comp-text">
-                            <h4>Fully Vetted & Licensed</h4>
-                            <p>Every single driver undergoes intensive background checks, training, and strict municipal regulatory screening.</p>
-                        </div>
-                    </div>
+    <!-- START: Premium About Us Section -->
+    <section class="kings-about-section" id="about-us">
+        <div class="kings-about-container">
+            
+            <div class="kings-about-grid">
+                <div class="kings-about-content">
+                    <span class="gold-badge">Who We Are</span>
+                    <h2>Lloydminster Professional Taxi & Transit Network</h2>
                     
-                    <div class="competency-item">
-                        <div class="comp-icon">❄️</div>
-                        <div class="comp-text">
-                            <h4>All-Weather Preparedness</h4>
-                            <p>Our clean, modern fleet is rigorously inspected and fully winterized to handle intense Western Canadian highway conditions safely.</p>
+                    <p>For over a decade, Kings Cabs has served as a safe, legal, and highly regulated transportation option across the unique bi-provincial layout of the Border City. Operating round the clock, 365 days a year, we seamlessly bridge the Alberta and Saskatchewan state lines, ensuring that local residents, corporate teams, and visitors navigate Lloydminster without operational delays.</p>
+                    
+                    <p>We pride ourselves on more than just getting you from point to point. Whether managing immediate local city rides, coordinating essential municipal senior program vouchers, or facilitating smooth long distance airport transfers along the Yellowhead Corridor to Edmonton, our mission remains centered on professional integrity, pristine fleet standards, and absolute punctuality.</p>
+                    
+                    <div class="competencies-box">
+                        <div class="competency-item">
+                            <div class="comp-icon">🛡️</div>
+                            <div class="comp-text">
+                                <h4>Fully Vetted & Licensed</h4>
+                                <p>Every single driver undergoes intensive background checks, training, and strict municipal regulatory screening.</p>
+                            </div>
                         </div>
+                        
+                        <div class="competency-item">
+                            <div class="comp-icon">❄️</div>
+                            <div class="comp-text">
+                                <h4>All-Weather Preparedness</h4>
+                                <p>Our clean, modern fleet is rigorously inspected and fully winterized to handle intense Western Canadian highway conditions safely.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-action-row">
+                        <a href="about.html" class="about-readmore-btn">Learn More About Our Story</a>
+                        <a href="tel:+13063071113" class="about-call-btn">📞 Call 306-307-1113</a>
                     </div>
                 </div>
 
-                <div class="about-action-row">
-                    <a href="about.html" class="about-readmore-btn">Learn More About Our Story</a>
-                    <a href="tel:+13063071113" class="about-call-btn">📞 Call 306-307-1113</a>
+                <div class="kings-about-stats-panel">
+                    <div class="stats-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Always On Duty</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Bi-Provincial Compliance</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stat-number">0<sub>km</sub></div>
+                        <div class="stat-label">No Long Distance Limits</div>
+                    </div>
+                    <div class="stats-card-highlight">
+                        <h4>Need an Immediate Ride?</h4>
+                        <p>Skip the outdoor waiting lines. Speak directly to our live, local dispatchers right now.</p>
+                        <a href="online-booking.html" class="stats-cta">Book Online Securely</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Right Side: Fast Facts Display Panel -->
-            <div class="kings-about-stats-panel">
-                <div class="stats-card">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Always On Duty</div>
-                </div>
-                <div class="stats-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Bi-Provincial Compliance</div>
-                </div>
-                <div class="stats-card">
-                    <div class="stat-number">0<sub>km</sub></div>
-                    <div class="stat-label">No Long-Distance Limits</div>
-                </div>
-                <div class="stats-card-highlight">
-                    <h4>Need an Immediate Ride?</h4>
-                    <p>Skip the outdoor waiting lines. Speak directly to our live, local dispatchers right now.</p>
-                    <a href="online-booking.html" class="stats-cta">Book Online Securely</a>
-                </div>
-            </div>
         </div>
-
-    </div>
-</section>
-<!-- END: Premium About Us Section -->
-
+    </section>
+    <!-- END: Premium About Us Section -->
 
     <footer id="about">
         <div class="footer-matrix">
@@ -367,18 +349,18 @@
             </div>
             <div class="footer-column">
                 <h4>Fleet Directories</h4>
-                <a href="#services">Airport Transfers</a>
-                <a href="#services">Local Transits</a>
-                <a href="#services">Long-Distance Trips</a>
-                <a href="#services">Corporate Services</a>
+                <a href="airport-transfers.html">Airport Transfers</a>
+                <a href="local-transits.html">Local Transits</a>
+                <a href="long-distance.html">Long Distance Trips</a>
+                <a href="corporate-accounts.html">Corporate Services</a>
             </div>
             <div class="footer-column">
                 <h4>More Pages</h4>
                 <a href="Privacy_Policy.html">Privacy Policy</a>
-                <a href="terms.html">Terms &amp; Conditions</a>
+                <a href="terms.html">Terms Conditions</a>
                 <a href="contact.html">Contact Us</a>
                 <a href="about.html">About Us</a>
-                <a href="faq.html">F.A.Q's</a>
+                <a href="faq.html">FAQs</a>
             </div>
             <div class="footer-column">
                 <h4>Contact Points</h4>
@@ -394,7 +376,7 @@
 
     <div class="mobile-action-bar">
         <a href="tel:1-306-307-1113" class="cta-btn">📞 Tap to Call</a>
-        <a href="#book-now" class="cta-btn btn-secondary">📅 Book Online</a>
+        <a href="online-booking.html" class="cta-btn btn-secondary">📅 Book Online</a>
     </div>
 
 </body>

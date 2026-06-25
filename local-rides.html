@@ -37,17 +37,18 @@
 
         /* 2. Premium Fixed Header Layout Override & Dropdown Utility */
         header {
-            background: rgba(11, 12, 16, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(208, 159, 56, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 12px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+            background-color: rgba(11, 12, 16, 0.85);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 4%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            box-sizing: border-box;
         }
         .brand-hub {
             display: flex;

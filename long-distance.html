@@ -27,9 +27,9 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* 2. Premium Fixed Header Layout Override */
+        /* 2. Premium Fixed Header Layout Override & Dropdown Utility */
         header {
-            background-color: #111111;
+            background-color: rgba(11, 12, 16, 0.85);
             position: fixed;
             top: 0;
             left: 0;
@@ -92,6 +92,49 @@
         .nav-menu a:hover {
             color: #d09f38;
         }
+
+        /* CSS Dropdown Implementation */
+        .nav-dropdown-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-trigger {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #111111;
+            min-width: 260px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.6);
+            border: 1px solid rgba(208, 159, 56, 0.2);
+            border-radius: 6px;
+            padding: 10px 0;
+            z-index: 99999;
+        }
+        .nav-dropdown-menu a {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-dropdown-menu a:hover {
+            background-color: rgba(208, 159, 56, 0.1);
+            color: #d09f38;
+        }
+        .nav-dropdown-wrapper:hover .nav-dropdown-menu {
+            display: block;
+        }
+
         .nav-menu .cta-btn {
             background-color: #d09f38;
             color: #111111;
@@ -465,10 +508,10 @@
 <body>
 
     <!-- PREMIUM FLOATING HEADER WITH MOBILE NAV SYSTEM -->
-    <header>
+     <header>
         <a href="index.html" class="brand-hub">
-            <img class="brand-logo" src="https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png" alt="Kings Crest" />
-            <img class="brand-text" src="https://kingscabs.ca/wp-content/uploads/2025/05/kings-wordmark.png" alt="Kings Cabs" />
+            <img class="brand-logo" src="images/lionhead.webp" alt="Kings Crest Logo" />
+            <img class="brand-text" src="images/kings-wordmark.webp" alt="Kings Cabs Corporate Wordmark" />
         </a>
 
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -478,13 +521,22 @@
             <span></span>
         </label>
 
-        <nav class="nav-menu">
-            <a href="index.html#services">Services</a>
-            <a href="index.html#book-now">Online Booking</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="tel:1-306-307-1113" class="cta-btn">📞 306-307-1113</a>
-        </nav>
+       <nav class="nav-menu">
+    <div class="nav-dropdown-wrapper">
+        <span class="dropdown-trigger">Services <span class="arrow-indicator">▾</span></span>
+        <div class="nav-dropdown-menu">
+            <a href="local-rides.html">Local City Rides</a>
+            <a href="airport-shuttle.html">Airport Shuttles</a>
+            <a href="long-distance.html">Long Distance Transit</a>
+            <a href="senior-vouchers.html">Senior Program Vouchers</a>
+            <a href="corporate-accounts.html">Corporate Accounts</a>
+        </div>
+    </div>
+    <a href="online-booking.html">Online Booking</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:1-306-307-1113" class="cta-btn">📞 306-307-1113</a>
+</nav>
     </header>
 
     <!-- HERO HEADER BANNER -->
@@ -621,34 +673,34 @@
         <div class="footer-matrix">
             <div class="footer-column">
                 <h4>Kings Cabs Hub</h4>
-                <p>Providing safe, legal, and highly regulated transportation networks for the Lloydminster region for over a decade .</p>
+                <p>Providing safe, legal, and highly regulated transportation networks for the Lloydminster region for over a decade.</p>
             </div>
             <div class="footer-column">
                 <h4>Fleet Directories</h4>
-                <a href="index.html#services">Airport Transfers</a> 
-                <a href="index.html#services">Local Transits</a> 
-                <a href="index.html#services">Long-Distance Trips</a> 
-                <a href="index.html#services">Corporate Services</a> 
+                <a href="airport-shuttle.html">Airport Transfers</a>
+                <a href="local-rides.html">Local Transits</a>
+                <a href="long-distance.html">Long Distance Trips</a>
+                <a href="corporate-accounts.html">Corporate Services</a>
             </div>
             <div class="footer-column">
                 <h4>More Pages</h4>
-                <a href="Privacy_Policy.html">Privacy Policy</a> 
-                <a href="terms.html">Terms &amp; Conditions</a> 
-                <a href="contact.html">Contact Us</a> 
-                <a href="about.html">About Us</a> 
-                <a href="faq.html">F.A.Q's</a> 
+                <a href="Privacy_Policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About Us</a>
+                <a href="faq.html">F.A.Q's</a>
             </div>
             <div class="footer-column">
                 <h4>Contact Points</h4>
-                <p>📍 6201a 49 ave Lloydminster, SK</p> 
-                <p>📞 (306) 307-1113</p> 
-                <p>✉️ kingscabsmbd@gmail.com</p> 
+                <p>📍 6201a 49 ave Lloydminster, SK</p>
+                <p>📞 (306) 307-1113</p>
+                <p>✉️ kingscabsmbd@gmail.com</p>
             </div>
         </div>
         <div class="bottom-bar">
-            <p>&copy; 2026 Kings Cabs Lloydminster. Fully Licensed & Approved Municipal Operator. All Rights Reserved.</p> 
+            <p>&copy; 2026 Kings Cabs Lloydminster. Fully Licensed & Approved Municipal Operator. All Rights Reserved.</p>
         </div>
     </footer>
-
+    
 </body>
 </html>

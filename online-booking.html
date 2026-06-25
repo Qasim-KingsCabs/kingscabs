@@ -517,16 +517,20 @@
         <!-- START OF ONLINE BOOKING IFRAME SECTION                            -->
         <!-- ================================================================= -->
         <div class="kingscabs-booking-container">
-            
-            <!-- IFRAME CODE GOES HERE -->
-            <!-- Note: Replace this placeholder block with your live iframe element once received from your dispatch engine provider -->
-            <div class="iframe-placeholder-content">
-                <p><strong>[ONLINE BOOKING ENGINE ACTIVE IFRAME ZONE]</strong></p>
-                <p style="font-size: 13px; max-width: 600px; margin: 0 auto;">(Paste the standard HTML &lt;iframe&gt; tag provided by your booking system software vendor right here inside this container layout to replace this notification.)</p>
-            </div>
-            
-            <!-- EX_FRAME SPEC: <iframe src="https://your-dispatch-system.com/book/kingscabs" width="100%" height="600" frameborder="0"></iframe> -->
-
+             <div id="taxicaller-booking-form" style="width: 100%;"></div>
+            <script src="https://passenger.taxicaller.net/embed/embed-v1.0.0.js"></script>
+            <script>
+                new TaxiCaller.PassengerApp({
+                    element: '#taxicaller-booking-form',
+                    app: 'taxicaller',
+                    company: 48430,
+                    heightDesktop: '550px',
+                    heightMobile: '350px',
+                    mobileBreakpoint: '768px',
+                    returnMessage: 'ᐊ Clear and Start Over',
+                })
+            </script>
+        </div>
         </div>
         <!-- ================================================================= -->
         <!-- END OF ONLINE BOOKING IFRAME SECTION                              -->

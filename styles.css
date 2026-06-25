@@ -106,7 +106,7 @@ header {
 .hero-window {
     position: relative;
     min-height: 85vh;
-    background: linear-gradient(rgba(11, 12, 16, 0.8), rgba(11, 12, 16, 0.9)), url('/Images/king-car-sunset-scaled.webp') no-repeat center center/cover;
+    background: linear-gradient(rgba(11, 12, 16, 0.8), rgba(11, 12, 16, 0.9)), url('images/king-car-sunset-scaled.webp') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;

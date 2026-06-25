@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GT-5D4TP6GL');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>24/7 Local City Rides & Commuting | Quick Cabs in Lloydminster</title>
     <meta name="description" content="Get fast, dependable, and affordable 24/7 city transit across the AB & SK border. Call Kings Cabs for the best local taxi rides in Lloydminster.">
-    <link rel="icon" href="https://kingscabs.ca/wp-content/uploads/2025/05/kings-favi-150x150.png" sizes="32x32">
+    <meta name="google-site-verification" content="d-y2UjGlGW1j3GkIDd3hTDKMR2UJzkwQB8VVfnMxM1c" />
+    
+    <link rel="icon" href="images/kings-favi-150x150.webp" sizes="32x32" type="image/webp">
     
     <!-- Link to global styles for Header/Footer -->
     <link rel="stylesheet" href="styles.css">
@@ -25,7 +35,7 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* 2. Premium Fixed Header Layout Override */
+        /* 2. Premium Fixed Header Layout Override & Dropdown Utility */
         header {
             background-color: #111111;
             position: fixed;
@@ -90,6 +100,49 @@
         .nav-menu a:hover {
             color: #d09f38;
         }
+
+        /* CSS Dropdown Implementation */
+        .nav-dropdown-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-trigger {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #111111;
+            min-width: 260px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.6);
+            border: 1px solid rgba(208, 159, 56, 0.2);
+            border-radius: 6px;
+            padding: 10px 0;
+            z-index: 99999;
+        }
+        .nav-dropdown-menu a {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-dropdown-menu a:hover {
+            background-color: rgba(208, 159, 56, 0.1);
+            color: #d09f38;
+        }
+        .nav-dropdown-wrapper:hover .nav-dropdown-menu {
+            display: block;
+        }
+
         .nav-menu .cta-btn {
             background-color: #d09f38;
             color: #111111;
@@ -392,7 +445,7 @@
             .about-section h2 { font-size: 20px; }
             .about-cta-panel h2 { font-size: 22px; }
 
-            /* Mobile Menu Hack Implementation */
+            /* Mobile Menu Hack Implementation Override */
             .hamburger-label {
                 display: flex;
             }
@@ -407,6 +460,32 @@
                 justify-content: center;
                 gap: 30px;
                 transition: top 0.4s ease-in-out;
+                overflow-y: auto;
+                padding-bottom: 60px;
+            }
+            .nav-dropdown-wrapper {
+                position: static;
+                display: block;
+                text-align: center;
+            }
+            .nav-dropdown-menu {
+                position: static;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                background-color: transparent;
+                display: block;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+                padding: 0;
+            }
+            .nav-dropdown-wrapper:hover .nav-dropdown-menu {
+                max-height: 500px;
+            }
+            .nav-dropdown-menu a {
+                padding: 8px 0;
+                font-size: 15px;
             }
             .menu-toggle:checked ~ .nav-menu {
                 top: 0;
@@ -425,44 +504,69 @@
 
     <!-- Isolated Schema Markup Integration for Local City Rides -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TaxiService",
-      "@id": "https://kingscabs.ca/local-rides.html#taxiservice",
-      "name": "Kings Cabs 24/7 Local City Rides & Commuting",
-      "description": "Fast, dependable, and highly affordable 24-hour taxi service providing local city rides and workforce commuting across Lloydminster, AB & SK.",
-      "url": "https://kingscabs.ca/local-rides.html",
-      "telephone": "+1-306-307-1113",
-      "priceRange": "$$",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Kings Cabs Lloydminster",
-        "image": "https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "6201a 49 ave",
-          "addressLocality": "Lloydminster",
-          "addressRegion": "SK",
-          "postalCode": "S9V",
-          "addressCountry": "CA"
-        }
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "TaxiService",
+        "@id": "https://kingscabs.ca/local-rides.html#taxiservice",
+        "name": "Kings Cabs 24/7 Local City Rides & Commuting",
+        "description": "Fast, dependable, and highly affordable 24-hour taxi service providing local city rides and workforce commuting across Lloydminster, AB & SK.",
+        "url": "https://kingscabs.ca/local-rides.html",
+        "telephone": "+1-306-307-1113",
+        "priceRange": "$$",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Kings Cabs Lloydminster",
+          "image": "https://kingscabs.ca/images/lionhead.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "6201a 49 ave",
+            "addressLocality": "Lloydminster",
+            "addressRegion": "SK",
+            "postalCode": "S9V",
+            "addressCountry": "CA"
+          }
+        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Lloydminster",
+            "containedInPlace": {
+              "@type": "AdministrativeArea",
+              "name": "Alberta"
+            }
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Lloydminster",
+            "containedInPlace": {
+              "@type": "AdministrativeArea",
+              "name": "Saskatchewan"
+            }
+          }
+        ]
       },
-      "areaServed": [
-        {
-          "@type": "AdministrativeArea",
-          "name": "Lloydminster"
-        }
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://kingscabs.ca/#website",
+        "url": "https://kingscabs.ca/",
+        "name": "Kings Cabs Lloydminster"
+      }
+    ]
     </script>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-5D4TP6GL"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- PREMIUM FLOATING HEADER WITH MOBILE NAV SYSTEM -->
     <header>
         <a href="index.html" class="brand-hub">
-            <img class="brand-logo" src="https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png" alt="Kings Crest" />
-            <img class="brand-text" src="https://kingscabs.ca/wp-content/uploads/2025/05/kings-wordmark.png" alt="Kings Cabs" />
+            <img class="brand-logo" src="images/lionhead.webp" alt="Kings Crest Logo" />
+            <img class="brand-text" src="images/kings-wordmark.webp" alt="Kings Cabs Corporate Wordmark" />
         </a>
 
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -473,7 +577,20 @@
         </label>
 
         <nav class="nav-menu">
-            <a href="index.html#services">Services</a>
+            <div class="nav-dropdown-wrapper">
+                <span class="dropdown-trigger">Services ▼</span>
+                <div class="nav-dropdown-menu">
+                    <a href="local-rides.html">Local City Rides</a>
+                    <a href="airport-shuttle.html">Airport Shuttles</a>
+                    <a href="long-distance.html">Long Distance Transit</a>
+                    <a href="senior-voucher.html">Senior Program Vouchers</a>
+                    <a href="corporate-accounts.html">Corporate Fleet Accounts</a>
+                    <a href="hourly-rentals.html">Hourly Cab Rentals</a>
+                    <a href="special-events.html">Special Event Charters</a>
+                    <a href="schedule-a-ride.html">Schedule-A-Ride Utility</a>
+                    <a href="phone-booking.html">Immediate Phone Booking</a>
+                </div>
+            </div>
             <a href="index.html#book-now">Online Booking</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
@@ -614,10 +731,10 @@
             </div>
             <div class="footer-column">
                 <h4>Fleet Directories</h4>
-                <a href="index.html#services">Airport Transfers</a>
-                <a href="index.html#services">Local Transits</a>
-                <a href="index.html#services">Long-Distance Trips</a>
-                <a href="index.html#services">Corporate Services</a>
+                <a href="airport-shuttle.html">Airport Transfers</a>
+                <a href="local-rides.html">Local Transits</a>
+                <a href="long-distance.html">Long-Distance Trips</a>
+                <a href="corporate-accounts.html">Corporate Services</a>
             </div>
             <div class="footer-column">
                 <h4>More Pages</h4>

@@ -25,7 +25,7 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* 2. Premium Fixed Header & Mobile Responsive Overlay Patch */
+/* 2. Premium Fixed Header Layout Override & Dropdown Utility */
         header {
             background-color: rgba(11, 12, 16, 0.85);
             position: fixed;
@@ -90,6 +90,49 @@
         .nav-menu a:hover {
             color: #d09f38;
         }
+
+        /* CSS Dropdown Implementation */
+        .nav-dropdown-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-trigger {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #111111;
+            min-width: 260px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.6);
+            border: 1px solid rgba(208, 159, 56, 0.2);
+            border-radius: 6px;
+            padding: 10px 0;
+            z-index: 99999;
+        }
+        .nav-dropdown-menu a {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-dropdown-menu a:hover {
+            background-color: rgba(208, 159, 56, 0.1);
+            color: #d09f38;
+        }
+        .nav-dropdown-wrapper:hover .nav-dropdown-menu {
+            display: block;
+        }
+
         .nav-menu .cta-btn {
             background-color: #d09f38;
             color: #111111;
@@ -103,12 +146,10 @@
             color: #111111;
         }
 
-        /* Adjust body wrapper padding to account for fixed header layout height */
+        /* Push body down to prevent coverage under fixed header */
         body {
             padding-top: 70px;
-        }
-
-        /* 3. Brand Hero Header */
+        }        /* 3. Brand Hero Header */
         .about-hero {
             background: linear-gradient(to bottom, rgba(11, 12, 16, 0.95), rgba(19, 26, 36, 0.95));
             padding: 80px 5% 50px;
@@ -625,10 +666,10 @@
             </div>
             <div class="footer-column">
                 <h4>Fleet Directories</h4>
-                <a href="index.html#services">Airport Transfers</a>
-                <a href="index.html#services">Local Transits</a>
-                <a href="index.html#services">Long-Distance Trips</a>
-                <a href="index.html#services">Corporate Services</a>
+                <a href="airport-shuttle.html">Airport Transfers</a>
+                <a href="local-rides.html">Local Transits</a>
+                <a href="long-distance.html">Long Distance Trips</a>
+                <a href="corporate-accounts.html">Corporate Services</a>
             </div>
             <div class="footer-column">
                 <h4>More Pages</h4>
@@ -649,6 +690,7 @@
             <p>&copy; 2026 Kings Cabs Lloydminster. Fully Licensed & Approved Municipal Operator. All Rights Reserved.</p>
         </div>
     </footer>
+
 
 </body>
 </html>

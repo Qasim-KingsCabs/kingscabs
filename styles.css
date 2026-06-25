@@ -615,3 +615,193 @@ footer {
         text-align: center;
     }
 }
+
+/* ==========================================================================
+   KINGS CABS - WHY CHOOSE US SECTION STYLES
+   ========================================================================== */
+
+.why-kings-section {
+    background-color: #11141a; /* Distinct subtle contrast block compared to standard deep black */
+    padding: 100px 4%;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.why-kings-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Elements */
+.why-kings-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+}
+
+.gold-subtitle {
+    color: #d09f38;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.why-kings-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: #ffffff;
+}
+
+.why-kings-header p {
+    color: #a3b1c6;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Feature Grid Structural Rules */
+.why-kings-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .why-kings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .why-kings-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Feature Cards Design */
+.why-card {
+    background-color: #0b0c10;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    padding: 35px 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(208, 159, 56, 0.2);
+}
+
+.why-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: rgba(208, 159, 56, 0.1);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+.why-icon {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.why-card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #ffffff;
+}
+
+.why-card p {
+    color: #8a99ad;
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Bottom CTA Mini Banner Layout */
+.why-cta-banner {
+    margin-top: 60px;
+    background: linear-gradient(90deg, #1f2833 0%, #0b0c10 100%);
+    border-left: 4px solid #d09f38;
+    padding: 30px 40px;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .why-cta-banner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.why-cta-banner p {
+    margin: 0;
+    font-size: 16px;
+    color: #e2e8f0;
+}
+
+.why-cta-banner strong {
+    color: #ffffff;
+}
+
+.why-cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.why-btn-gold {
+    background-color: #d09f38;
+    color: #111111;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 14.5px;
+    transition: background-color 0.2s;
+}
+
+.why-btn-gold:hover {
+    background-color: #ba7e21;
+}
+
+.why-btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14.5px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.why-btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Small Device Screen Optimization Adjustments */
+@media (max-width: 576px) {
+    .why-kings-header h2 { font-size: 28px; }
+    .why-card { padding: 25px 20px; }
+    .why-cta-banner { padding: 25px 20px; }
+    .why-cta-buttons { width: 100%; flex-direction: column; }
+    .why-cta-buttons a { text-align: center; width: 100%; }
+}

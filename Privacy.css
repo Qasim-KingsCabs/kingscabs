@@ -12,19 +12,131 @@
     --pure-white: #ffffff;
 }
 
-header {
-    background: rgba(11, 12, 16, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(208, 159, 56, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 12px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        /* 2. Premium Fixed Header Layout Override & Dropdown Utility */
+        header {
+            background-color: rgba(11, 12, 16, 0.85);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 4%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            box-sizing: border-box;
+        }
+        .brand-hub {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+        .brand-logo {
+            height: 50px;
+            width: auto;
+        }
+        .brand-text {
+            height: 30px;
+            width: auto;
+        }
+
+        /* Checkbox Hack for Mobile Navigation */
+        .menu-toggle {
+            display: none;
+        }
+        .hamburger-label {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .hamburger-label span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: #d09f38;
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #d09f38;
+        }
+
+        /* CSS Dropdown Implementation */
+        .nav-dropdown-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-trigger {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #111111;
+            min-width: 260px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.6);
+            border: 1px solid rgba(208, 159, 56, 0.2);
+            border-radius: 6px;
+            padding: 10px 0;
+            z-index: 99999;
+        }
+        .nav-dropdown-menu a {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-dropdown-menu a:hover {
+            background-color: rgba(208, 159, 56, 0.1);
+            color: #d09f38;
+        }
+        .nav-dropdown-wrapper:hover .nav-dropdown-menu {
+            display: block;
+        }
+
+        .nav-menu .cta-btn {
+            background-color: #d09f38;
+            color: #111111;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+        .nav-menu .cta-btn:hover {
+            transform: scale(1.05);
+            color: #111111;
+        }
+
+        /* Push body down to prevent coverage under fixed header */
+        body {
+            padding-top: 70px;
+        }
 
 .brand-hub { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand-logo { height: 45px; width: auto; }

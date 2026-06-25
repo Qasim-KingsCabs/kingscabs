@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <title>Terms & Conditions &amp; Disclaimer | Kings Cabs Lloydminster</title>
     <meta name="description" content="Official Terms & Conditions and Corporate Disclaimer for Kings Cabs Lloydminster. Review our transit policies, booking compliance, and passenger responsibilities.">
     
@@ -31,19 +31,37 @@
 <body>
 
     <!-- PREMIUM FLOATING HEADER -->
-    <header>
+        <header>
         <a href="index.html" class="brand-hub">
-            <img class="brand-logo" src="https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png" alt="Kings Crest" />
-            <img class="brand-text" src="https://kingscabs.ca/wp-content/uploads/2025/05/kings-wordmark.png" alt="Kings Cabs" />
+            <img class="brand-logo" src="images/lionhead.webp" alt="Kings Crest Logo" />
+            <img class="brand-text" src="images/kings-wordmark.webp" alt="Kings Cabs Corporate Wordmark" />
         </a>
-        <nav class="nav-menu">
-            <a href="index.html#services">Services</a>
-            <a href="index.html#book-now">Online Booking</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="tel:1-306-307-1113" class="cta-btn">📞 306-307-1113</a>
-        </nav>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+       <nav class="nav-menu">
+    <div class="nav-dropdown-wrapper">
+        <span class="dropdown-trigger">Services <span class="arrow-indicator">▾</span></span>
+        <div class="nav-dropdown-menu">
+            <a href="local-rides.html">Local City Rides</a>
+            <a href="airport-shuttle.html">Airport Shuttles</a>
+            <a href="long-distance.html">Long Distance Transit</a>
+            <a href="senior-vouchers.html">Senior Program Vouchers</a>
+            <a href="corporate-accounts.html">Corporate Accounts</a>
+        </div>
+    </div>
+    <a href="online-booking.html">Online Booking</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:1-306-307-1113" class="cta-btn">📞 306-307-1113</a>
+</nav>
     </header>
+
 
     <!-- LEGAL HERO HEADER BANNER -->
     <section class="terms-hero">
@@ -177,6 +195,17 @@
                 <p>While we strive to provide the best taxi service in Lloydminster, Kings Cabs does not guarantee specific arrival times, specific outcomes, uninterrupted operations, or error-free website performance. All transportation is subject to real-world variables.</p>
             </div>
 
+            <h2>3. Right to Substitute Vehicles & Deploy Affiliate Services</h2>
+<p>To maintain our strict commitment to punctuality, passenger safety, and reliable dispatch times, Kings Cabs reserves the right to substitute vehicles and delegate transport requests to trusted partner networks, independent contractors, or third-party sister cab services under specific operational conditions. These conditions include, but are not limited to:</p>
+
+<ul>
+    <li>Extreme high-volume dispatch surges or peak operational hours.</li>
+    <li>Severe winter weather conditions, road closures, or localized traffic emergencies.</li>
+    <li>Sudden mechanical maintenance requirements within our primary fleet.</li>
+</ul>
+
+<p>By booking a ride with Kings Cabs—whether via phone, online portal, or advanced scheduling—you acknowledge and agree that an authorized, fully licensed, and commercially insured affiliate vehicle may be dispatched to fulfill your transportation request. In all such instances, the established flat-rate quote or standard local mileage tariff agreed upon during your initial booking will remain strictly honored, and your transit will be governed completely under our standard safety and quality frameworks.</p>
+
             <div class="disclaimer-node highlight-node">
                 <h4>Consent</h4>
                 <p>By using kingscabs.ca, booking a ride, or engaging with our services, you consent to this Disclaimer and agree to its terms.</p>
@@ -197,7 +226,7 @@
     </main>
 
     <!-- HIGH-AUTHORITY MUNICIPAL FOOTER -->
-   <footer id="about">
+    <footer id="about">
         <div class="footer-matrix">
             <div class="footer-column">
                 <h4>Kings Cabs Hub</h4>
@@ -205,10 +234,10 @@
             </div>
             <div class="footer-column">
                 <h4>Fleet Directories</h4>
-                <a href="index.html#services">Airport Transfers</a>
-                <a href="index.html#services">Local Transits</a>
-                <a href="index.html#services">Long-Distance Trips</a>
-                <a href="index.html#services">Corporate Services</a>
+                <a href="airport-shuttle.html">Airport Transfers</a>
+                <a href="local-rides.html">Local Transits</a>
+                <a href="long-distance.html">Long Distance Trips</a>
+                <a href="corporate-accounts.html">Corporate Services</a>
             </div>
             <div class="footer-column">
                 <h4>More Pages</h4>

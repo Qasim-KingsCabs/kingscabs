@@ -18,7 +18,911 @@
         gtag("js", new Date());
         gtag("config", "GT-5D4TP6GL");
     </script>
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+        :root {
+    --gold-light: #fff088;
+    --gold-mid: #d09f38;
+    --gold-dark: #ba7e21;
+    --gold-gradient: linear-gradient(135deg, #ba7e21 0%, #d09f38 50%, #fff088 100%);
+    --dark-bg: #0b0c10;
+    --panel-bg: #1f2833;
+    --text-light: #f5f5f7;
+    --text-gray: #c5a059;
+    --pure-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+/* Premium Floating Navigation Header */
+header {
+    background: rgba(11, 12, 16, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(208, 159, 56, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 12px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-hub {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.brand-logo {
+    height: 45px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.brand-text {
+    height: 24px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--gold-mid);
+}
+
+/* Global Golden Action Buttons */
+.cta-btn {
+    background: var(--gold-gradient);
+    color: #000000 !important;
+    padding: 12px 28px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid var(--gold-light);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(186, 126, 33, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 240, 136, 0.4);
+}
+
+/* Dynamic Hero Section */
+.hero-window {
+    position: relative;
+    min-height: 85vh;
+    background: linear-gradient(rgba(11, 12, 16, 0.8), rgba(11, 12, 16, 0.9)), url('images/king-car-sunset-scaled.webp') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-crest {
+    height: 110px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, var(--pure-white) 30%, var(--gold-light));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #a3b1c6;
+    margin-bottom: 35px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.action-cluster {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-light) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--text-light);
+}
+
+/* Interface Content Sections */
+.content-block {
+    padding: 90px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    color: var(--pure-white);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: var(--gold-mid);
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Custom Responsive Service Grids */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--panel-bg);
+    border: 1px solid rgba(208, 159, 56, 0.1);
+    border-radius: 12px;
+    padding: 35px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold-mid);
+}
+
+.card-icon {
+    font-size: 32px;
+    color: var(--gold-mid);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--pure-white);
+}
+
+.service-card p {
+    color: #a3b1c6;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Seamless Dispatch Frame Workspace */
+.dispatch-wrapper {
+    background: #11141a;
+    border-radius: 16px;
+    border: 1px solid rgba(208, 159, 56, 0.15);
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Elegant Native Customer Testimonials */
+.review-cluster {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.review-node {
+    background: rgba(31, 40, 51, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.rating-stars {
+    color: var(--gold-mid);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.review-node p {
+    font-style: italic;
+    color: #dfe6ed;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Simplified Clean Footer Workspace */
+footer {
+    background: #060709;
+    border-top: 1px solid rgba(208, 159, 56, 0.2);
+    padding: 60px 5% 30px;
+}
+
+.footer-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h4 {
+    color: var(--pure-white);
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-column p,
+.footer-column a {
+    color: #a3b1c6;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 12px;
+    display: block;
+    transition: color 0.2s;
+}
+
+.footer-column a:hover {
+    color: var(--gold-mid);
+}
+
+.bottom-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #626d7a;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Mobile Layout Fixes */
+@media (max-width: 768px) {
+    header {
+        padding: 12px 4%;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .content-block {
+        padding: 60px 4%;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fixed Mobile Bar Panel */
+.mobile-action-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+    border-top: 2px solid var(--gold-mid);
+    z-index: 9999;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    gap: 10px;
+}
+
+@media (max-width: 767px) {
+    .mobile-action-bar {
+        display: grid;
+    }
+
+    body {
+        padding-bottom: 70px;
+    }
+}
+
+/* ==========================================================================
+   KINGS CABS INDEX.HTML - ABOUT US SECTION CODES
+   ========================================================================== */
+
+.kings-about-section {
+    background-color: #0b0c10;
+    padding: 90px 4%;
+    color: #f5f5f7;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kings-about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Base Layout Structure (Fallback grid framework compatible with WeasyPrint/Web) */
+.kings-about-grid {
+    display: block;
+}
+
+/* Real-Web layout processing via standard inline-blocks/flex modern support */
+@media (min-width: 992px) {
+    .kings-about-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 60px;
+        align-items: center;
+    }
+}
+
+/* Content Element Definitions */
+.gold-badge {
+    color: #d09f38;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.kings-about-content h2 {
+    font-size: 32px;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.kings-about-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #a3b1c6;
+    margin-bottom: 20px;
+}
+
+/* Core Competencies Styling */
+.competencies-box {
+    margin: 35px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.competency-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.comp-icon {
+    font-size: 24px;
+    background: rgba(208, 159, 56, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    line-height: 1;
+}
+
+.comp-text h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.comp-text p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #8a99ad;
+}
+
+/* Action Trigger Links */
+.about-action-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.about-readmore-btn {
+    background-color: #d09f38;
+    color: #111111;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 15px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.about-readmore-btn:hover {
+    transform: translateY(-2px);
+    background-color: #ba7e21;
+}
+
+.about-call-btn {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background-color 0.2s;
+}
+
+.about-call-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Right Side: Stats Panel Styling */
+.kings-about-stats-panel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 40px;
+}
+
+@media (min-width: 992px) {
+    .kings-about-stats-panel {
+        margin-top: 0;
+    }
+}
+
+.stats-card {
+    background: #11141a;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 25px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #d09f38;
+    margin-bottom: 5px;
+}
+
+.stat-number sub {
+    font-size: 14px;
+    bottom: 0;
+    color: #a3b1c6;
+}
+
+.stat-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #a3b1c6;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+.stats-card-highlight {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #1f2833 0%, #11141a 100%);
+    border: 1px solid rgba(208, 159, 56, 0.25);
+    padding: 30px 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stats-card-highlight h4 {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.stats-card-highlight p {
+    font-size: 13.5px;
+    color: #a3b1c6;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+.stats-cta {
+    display: inline-block;
+    color: #d09f38;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #d09f38;
+    padding-bottom: 4px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.stats-cta:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* Responsiveness Tweaks */
+@media (max-width: 576px) {
+    .kings-about-content h2 {
+        font-size: 26px;
+    }
+
+    .kings-about-stats-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-card-highlight {
+        grid-column: span 1;
+    }
+
+    .about-action-row {
+        flex-direction: column;
+    }
+
+    .about-action-row a {
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   KINGS CABS - WHY CHOOSE US SECTION STYLES
+   ========================================================================== */
+
+.why-kings-section {
+    background-color: #11141a; /* Distinct subtle contrast block compared to standard deep black */
+    padding: 100px 4%;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.why-kings-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Elements */
+.why-kings-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+}
+
+.gold-subtitle {
+    color: #d09f38;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.why-kings-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: #ffffff;
+}
+
+.why-kings-header p {
+    color: #a3b1c6;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Feature Grid Structural Rules */
+.why-kings-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .why-kings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .why-kings-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Feature Cards Design */
+.why-card {
+    background-color: #0b0c10;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    padding: 35px 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(208, 159, 56, 0.2);
+}
+
+.why-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: rgba(208, 159, 56, 0.1);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+.why-icon {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.why-card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #ffffff;
+}
+
+.why-card p {
+    color: #8a99ad;
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Bottom CTA Mini Banner Layout */
+.why-cta-banner {
+    margin-top: 60px;
+    background: linear-gradient(90deg, #1f2833 0%, #0b0c10 100%);
+    border-left: 4px solid #d09f38;
+    padding: 30px 40px;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .why-cta-banner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.why-cta-banner p {
+    margin: 0;
+    font-size: 16px;
+    color: #e2e8f0;
+}
+
+.why-cta-banner strong {
+    color: #ffffff;
+}
+
+.why-cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.why-btn-gold {
+    background-color: #d09f38;
+    color: #111111;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 14.5px;
+    transition: background-color 0.2s;
+}
+
+.why-btn-gold:hover {
+    background-color: #ba7e21;
+}
+
+.why-btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14.5px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.why-btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Small Device Screen Optimization Adjustments */
+@media (max-width: 576px) {
+    .why-kings-header h2 { font-size: 28px; }
+    .why-card { padding: 25px 20px; }
+    .why-cta-banner { padding: 25px 20px; }
+    .why-cta-buttons { width: 100%; flex-direction: column; }
+    .why-cta-buttons a { text-align: center; width: 100%; }
+}
+
+/* Navigation Hub CSS Adjustments */
+.main-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* CSS-Only Dropdown Logic */
+.nav-dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content-panel {
+    display: none;
+    position: absolute;
+    background-color: #11141a;
+    min-width: 230px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.05);
+    z-index: 99;
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+}
+.dropdown-content-panel a {
+    color: #a3b1c6;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+.dropdown-content-panel a:hover {
+    background-color: #1f2833;
+    color: #ffffff;
+}
+.nav-dropdown-wrapper:hover .dropdown-content-panel {
+    display: block;
+}
+
+/* Service Card Target Links */
+.service-panel-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #d09f38;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+}
+
+/* CSS Hamburger Grid System */
+.menu-toggle-input {
+    display: none;
+}
+.hamburger-bar {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.hamburger-bar span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Mobile Media Adaptations */
+@media (max-width: 991px) {
+    .hamburger-bar {
+        display: flex;
+    }
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0b0c10;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+    .menu-toggle-input:checked ~ .nav-menu {
+        display: flex;
+    }
+    .dropdown-content-panel {
+        position: relative;
+        background-color: #0b0c10;
+        box-shadow: none;
+        padding-left: 15px;
+    }
+}
+
+    </style>
     <script type="application/ld+json">
     [
       {

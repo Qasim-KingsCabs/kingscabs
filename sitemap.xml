@@ -1,52 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Homepage / Core Dispatch Hub -->
+  <!-- Core Landing Page -->
   <url>
     <loc>https://kingscabs.ca/index.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
 
-  <!-- About Us Page -->
+  <!-- Core Services -->
+  <url>
+    <loc>https://kingscabs.ca/local-rides.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://kingscabs.ca/airport-shuttle.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://kingscabs.ca/long-distance.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://kingscabs.ca/senior-vouchers.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://kingscabs.ca/corporate-accounts.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Authority & Contact Assets -->
   <url>
     <loc>https://kingscabs.ca/about.html</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.50</priority>
   </url>
-
-  <!-- Contact Us Page -->
   <url>
     <loc>https://kingscabs.ca/contact.html</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.50</priority>
   </url>
-
-  <!-- Frequently Asked Questions (FAQ) -->
   <url>
     <loc>https://kingscabs.ca/faq.html</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.40</priority>
   </url>
 
-  <!-- Terms & Conditions / Disclaimer -->
-  <url>
-    <loc>https://kingscabs.ca/terms.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.30</priority>
-  </url>
-
-  <!-- Privacy Policy -->
+  <!-- Legal Compliance Pages -->
   <url>
     <loc>https://kingscabs.ca/Privacy_Policy.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
-
+  <url>
+    <loc>https://kingscabs.ca/terms.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
 </urlset>

@@ -1,0 +1,17 @@
+# Global Directives for Main Search Engines
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /config/
+Disallow: /scripts/
+Disallow: /css/
+Disallow: /js/
+
+# Block Aggressive AI Crawlers to Protect Bandwidth
+User-agent: Amazonbot
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+Disallow: /
+
+# Direct Link to XML Sitemap
+Sitemap: https://kingscabs.ca/sitemap.xml

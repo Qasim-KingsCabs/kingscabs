@@ -46,19 +46,38 @@
 <body>
 
     <!-- PREMIUM FLOATING HEADER -->
-   <header>
+    <header>
         <a href="index.html" class="brand-hub">
-            <img class="brand-logo" src="https://kingscabs.ca/wp-content/uploads/2025/05/lionhead.png" alt="Kings Crest" />
-            <img class="brand-text" src="https://kingscabs.ca/wp-content/uploads/2025/05/kings-wordmark.png" alt="Kings Cabs" />
+            <img class="brand-logo" src="images/lionhead.webp" alt="Kings Crest Logo" />
+            <img class="brand-text" src="images/kings-wordmark.webp" alt="Kings Cabs Corporate Wordmark" />
         </a>
-        <nav class="nav-menu">
-            <a href="index.html#services">Services</a>
-            <a href="online-booking.html">Online Booking</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="tel:1-306-307-1113" class="cta-btn">📞 306-307-1113</a>
-        </nav>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+       <nav class="nav-menu">
+    <div class="nav-dropdown-wrapper">
+        <span class="dropdown-trigger">Services <span class="arrow-indicator">▾</span></span>
+        <div class="nav-dropdown-menu">
+            <a href="local-rides.html">Local City Rides</a>
+            <a href="airport-shuttle.html">Airport Shuttles</a>
+            <a href="long-distance.html">Long Distance Transit</a>
+            <a href="senior-vouchers.html">Senior Program Vouchers</a>
+            <a href="corporate-accounts.html">Corporate Accounts</a>
+            <a href="drive-home.html">Drive Home Service</a>
+        </div>
+    </div>
+        <a href="online-booking.html">Online Booking</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:1-306-307-1113" class="cta-btn">📞 306-307-1113</a>
+    </nav>
     </header>
+
 
 
 
@@ -195,8 +214,7 @@
 
     </main>
 
-    <!-- HIGH-AUTHORITY MUNICIPAL FOOTER -->
-    <footer id="about">
+    <!-- HIGH-AUTHORITY MUNICIPAL FOOTER -->    <footer id="about">
         <div class="footer-matrix">
             <div class="footer-column">
                 <h4>Kings Cabs Hub</h4>
@@ -204,10 +222,11 @@
             </div>
             <div class="footer-column">
                 <h4>Fleet Directories</h4>
-                <a href="index.html#services">Airport Transfers</a>
-                <a href="index.html#services">Local Transits</a>
-                <a href="index.html#services">Long-Distance Trips</a>
-                <a href="index.html#services">Corporate Services</a>
+                <a href="airport-shuttle.html">Airport Transfers</a>
+                <a href="local-rides.html">Local Transits</a>
+                <a href="long-distance.html">Long Distance Trips</a>
+                <a href="corporate-accounts.html">Corporate Services</a>
+                <a href="drive-home.html">Drive Home Service</a>
             </div>
             <div class="footer-column">
                 <h4>More Pages</h4>

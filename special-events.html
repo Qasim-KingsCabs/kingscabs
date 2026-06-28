@@ -25,9 +25,9 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* 2. Premium Fixed Header Layout Override */
+        /* 2. Premium Fixed Header Layout Override & Dropdown Utility */
         header {
-            background-color: #111111;
+            background-color: rgba(11, 12, 16, 0.85);
             position: fixed;
             top: 0;
             left: 0;
@@ -90,6 +90,49 @@
         .nav-menu a:hover {
             color: #d09f38;
         }
+
+        /* CSS Dropdown Implementation */
+        .nav-dropdown-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-trigger {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #111111;
+            min-width: 260px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.6);
+            border: 1px solid rgba(208, 159, 56, 0.2);
+            border-radius: 6px;
+            padding: 10px 0;
+            z-index: 99999;
+        }
+        .nav-dropdown-menu a {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-dropdown-menu a:hover {
+            background-color: rgba(208, 159, 56, 0.1);
+            color: #d09f38;
+        }
+        .nav-dropdown-wrapper:hover .nav-dropdown-menu {
+            display: block;
+        }
+
         .nav-menu .cta-btn {
             background-color: #d09f38;
             color: #111111;

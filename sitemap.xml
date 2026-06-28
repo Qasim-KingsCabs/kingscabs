@@ -40,6 +40,13 @@
     <priority>0.80</priority>
   </url>
 
+    <url>
+    <loc>https://kingscabs.ca/special-events.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
   <!-- Authority & Contact Assets -->
   <url>
     <loc>https://kingscabs.ca/about.html</loc>
